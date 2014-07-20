@@ -120,3 +120,11 @@ xstc/Makefile.in
 xstc/Tests
 xstc/xsts-*.tar.gz
 compile
+*.obj
+*.tlog
+*.suo
+*.sdf
+*.opensdf
+*.pdb
+*.idb
+*.ilk
