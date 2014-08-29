@@ -128,3 +128,6 @@ compile
 *.pdb
 *.idb
 *.ilk
+
+#Ensure files required by SMC msvc builds are included
+!SMC/*.h
