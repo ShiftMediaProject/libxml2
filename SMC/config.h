@@ -1,5 +1,6 @@
-/* config.h.  Generated from config.h.in by configure.  */
-/* config.h.in.  Generated from configure.in by autoheader.  */
+
+/* Type cast for the gethostbyname() argument */
+#define GETHOSTBYNAME_ARG_CAST (char *)
 
 /* Define to 1 if you have the <ansidecl.h> header file. */
 /* #undef HAVE_ANSIDECL_H */
@@ -273,8 +274,7 @@
 /* Define as const if the declaration of iconv() needs const. */
 #define ICONV_CONST
 
-/* Define to the sub-directory in which libtool stores uninstalled libraries.
-   */
+/* Define to the sub-directory in which libtool stores uninstalled libraries. */
 #define LT_OBJDIR ".libs/"
 
 /* Name of package */
@@ -297,11 +297,17 @@
 
 #include "version.h"
 
+/* Type cast for the send() function 2nd arg */
+#define SEND_ARG2_CAST (char *)
+
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
 
 /* Support for IPv6 */
 /* #undef SUPPORT_IP6 */
+
+/* Define if va_list is an array type */
+/* #undef VA_LIST_IS_ARRAY */
 
 /* Determine what socket length (socklen_t) data type is */
 #define XML_SOCKLEN_T int
@@ -312,7 +318,7 @@
 /* #undef _UINT32_T */
 
 /* Using the Win32 Socket implementation */
-//#define _WINSOCKAPI_ 1
+#define _WINSOCKAPI_ 1
 
 #ifdef NEED_SOCKETS
 #include <wsockcompat.h>

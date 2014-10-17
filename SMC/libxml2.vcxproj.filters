@@ -10,6 +10,12 @@
     <Filter Include="Header Files\libxml2">
       <UniqueIdentifier>{7661ef54-3924-439b-af44-5ce59d06d0da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{d30ef706-ccca-4cc3-a3ac-d907bad9a5d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\libxml2">
+      <UniqueIdentifier>{d4f63c8a-5932-41e1-ba6e-ba979064954e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\xmlcatalog.c">
@@ -169,6 +175,144 @@
     </ClInclude>
     <ClInclude Include="libxml\xmlversion.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\nanoftp.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\nanohttp.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\parser.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\parserInternals.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\pattern.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\relaxng.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\SAX.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\SAX2.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\schemasInternals.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\schematron.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\threads.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\tree.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\uri.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\valid.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xinclude.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xlink.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xmlautomata.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xmlerror.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xmlexports.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xmlIO.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xmlmemory.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xmlmodule.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xmlreader.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xmlregexp.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xmlsave.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xmlschemas.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xmlschemastypes.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xmlstring.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xmlunicode.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xmlwriter.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xpath.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xpathInternals.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\xpointer.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\c14n.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\catalog.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\chvalid.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\debugXML.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\dict.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\DOCBparser.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\encoding.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\entities.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\globals.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\hash.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\HTMLparser.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\HTMLtree.h">
+      <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\libxml\list.h">
+      <Filter>Header Files\include\libxml2</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
