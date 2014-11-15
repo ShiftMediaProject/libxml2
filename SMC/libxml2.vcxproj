@@ -389,7 +389,6 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_LIB;LIBXML_STATIC;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -415,7 +414,7 @@ mkdir $(OutDir)\include\libxml2\libxml
 copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
 copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libxml2.txt</Command>
+copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -435,12 +434,10 @@ cd $(ProjectDir)
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_LIB;LIBXML_STATIC;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <ExceptionHandling>false</ExceptionHandling>
       <DisableSpecificWarnings>4996;4800;4244;4018;4146;4267;4005</DisableSpecificWarnings>
     </ClCompile>
@@ -461,7 +458,7 @@ mkdir $(OutDir)\include\libxml2\libxml
 copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
 copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libxml2.txt</Command>
+copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -481,7 +478,6 @@ cd $(ProjectDir)
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_USRDLL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -509,7 +505,7 @@ mkdir $(OutDir)\include\libxml2\libxml
 copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
 copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libxml2.txt</Command>
+copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -557,7 +553,7 @@ mkdir $(OutDir)\include\libxml2\libxml
 copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
 copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libxml2.txt</Command>
+copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -577,12 +573,10 @@ cd $(ProjectDir)
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_USRDLL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <ExceptionHandling>false</ExceptionHandling>
       <DisableSpecificWarnings>4996;4800;4244;4018;4146;4267</DisableSpecificWarnings>
     </ClCompile>
@@ -604,7 +598,7 @@ mkdir $(OutDir)\include\libxml2\libxml
 copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
 copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libxml2.txt</Command>
+copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -651,7 +645,7 @@ mkdir $(OutDir)\include\libxml2\libxml
 copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
 copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libxml2.txt</Command>
+copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -673,7 +667,6 @@ cd $(ProjectDir)
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_LIB;LIBXML_STATIC;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -712,7 +705,7 @@ mkdir $(OutDir)\include\libxml2\libxml
 copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
 copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libxml2.txt</Command>
+copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -734,7 +727,6 @@ cd $(ProjectDir)
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_LIB;LIBXML_STATIC;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -773,7 +765,7 @@ mkdir $(OutDir)\include\libxml2\libxml
 copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
 copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libxml2.txt</Command>
+copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -795,12 +787,10 @@ cd $(ProjectDir)
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_LIB;LIBXML_STATIC;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <BufferSecurityCheck>false</BufferSecurityCheck>
-      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -834,7 +824,7 @@ mkdir $(OutDir)\include\libxml2\libxml
 copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
 copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libxml2.txt</Command>
+copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -856,12 +846,10 @@ cd $(ProjectDir)
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_LIB;LIBXML_STATIC;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <BufferSecurityCheck>false</BufferSecurityCheck>
-      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -895,7 +883,7 @@ mkdir $(OutDir)\include\libxml2\libxml
 copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
 copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libxml2.txt</Command>
+copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -917,7 +905,6 @@ cd $(ProjectDir)
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_USRDLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -955,7 +942,7 @@ mkdir $(OutDir)\include\libxml2\libxml
 copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
 copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libxml2.txt</Command>
+copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -1015,7 +1002,7 @@ mkdir $(OutDir)\include\libxml2\libxml
 copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
 copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libxml2.txt</Command>
+copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -1037,12 +1024,10 @@ cd $(ProjectDir)
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_USRDLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <BufferSecurityCheck>false</BufferSecurityCheck>
-      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -1074,7 +1059,7 @@ mkdir $(OutDir)\include\libxml2\libxml
 copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
 copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libxml2.txt</Command>
+copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -1133,7 +1118,7 @@ mkdir $(OutDir)\include\libxml2\libxml
 copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
 copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libxml2.txt</Command>
+copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
