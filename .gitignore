@@ -119,16 +119,5 @@ xstc/Makefile
 xstc/Makefile.in
 xstc/Tests
 xstc/xsts-*.tar.gz
-compile
-*.obj
-*.tlog
-*.suo
-*.sdf
-*.opensdf
-*.pdb
-*.idb
-*.ilk
-*.exe
 
-#Ensure files required by SMC msvc builds are included
-!SMC/*.h
+compile
