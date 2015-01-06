@@ -274,29 +274,6 @@
 /* Define as const if the declaration of iconv() needs const. */
 #define ICONV_CONST
 
-/* Define to the sub-directory in which libtool stores uninstalled libraries. */
-#define LT_OBJDIR ".libs/"
-
-/* Name of package */
-#define PACKAGE "libxml2"
-
-/* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT ""
-
-/* Define to the full name of this package. */
-#define PACKAGE_NAME "LibXML2"
-
-/* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "libxml2"
-
-/* Define to the home page for this package. */
-#define PACKAGE_URL ""
-
-/* Define to the version of this package. */
-#undef PACKAGE_VERSION
-
-#include "version.h"
-
 /* Type cast for the send() function 2nd arg */
 #define SEND_ARG2_CAST (char *)
 
@@ -323,10 +300,3 @@
 #ifdef NEED_SOCKETS
 #include <wsockcompat.h>
 #endif
-
-/* ss_family is not defined here, use __ss_family instead */
-/* #undef ss_family */
-
-/* Define to the type of an unsigned integer type of width exactly 32 bits if
-   such a type exists and the standard includes do not define it. */
-/* #undef uint32_t */

@@ -158,9 +158,6 @@
     <ClInclude Include="config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="version.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\buf.h">
       <Filter>Header Files\libxml2</Filter>
     </ClInclude>

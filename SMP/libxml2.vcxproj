@@ -172,7 +172,6 @@
     <ClInclude Include="..\xzlib.h" />
     <ClInclude Include="config.h" />
     <ClInclude Include="libxml\xmlversion.h" />
-    <ClInclude Include="version.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CFE70273-7A79-4815-AF95-1E02E2675E37}</ProjectGuid>
