@@ -74,22 +74,8 @@
     <ClCompile Include="..\HTMLtree.c" />
     <ClCompile Include="..\legacy.c" />
     <ClCompile Include="..\list.c" />
-    <ClCompile Include="..\nanoftp.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DebugDLLStaticDeps|Win32'">WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_USRDLL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLStaticDeps|Win32'">WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_USRDLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DebugDLLStaticDeps|x64'">WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_USRDLL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLStaticDeps|x64'">WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_USRDLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <ClCompile Include="..\nanohttp.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DebugDLLStaticDeps|Win32'">WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_USRDLL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLStaticDeps|Win32'">WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_USRDLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DebugDLLStaticDeps|x64'">WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_USRDLL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLStaticDeps|x64'">WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_USRDLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">WIN32;_WINDOWS;HAVE_CONFIG_H;snprintf=_snprintf;_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
+    <ClCompile Include="..\nanoftp.c" />
+    <ClCompile Include="..\nanohttp.c" />
     <ClCompile Include="..\parser.c" />
     <ClCompile Include="..\parserInternals.c" />
     <ClCompile Include="..\pattern.c" />
