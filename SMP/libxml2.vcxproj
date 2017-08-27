@@ -439,11 +439,11 @@
       <AdditionalLibraryDirectories>$(OutDir)\lib\x86\;$(ProjectDir)\..\..\prebuilt\lib\x86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\libxml2
-mkdir $(OutDir)\include\libxml2\libxml
-copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
-copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\libxml2
+mkdir "$(OutDir)"\include\libxml2\libxml
+copy ..\include\libxml\*.h "$(OutDir)"\include\libxml2\libxml
+copy .\libxml\xmlversion.h "$(OutDir)"\include\libxml2\libxml
 mkdir $(OutDir)\licenses
 copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
@@ -454,8 +454,8 @@ del ..\config.h
 if exist ..\include\libxml\xmlversion.h (
 del ..\include\libxml\xmlversion.h
 )
-if exist $(OutDir)\include\libxml2 (
-rd /s /q $(OutDir)\include\libxml2
+if exist "$(OutDir)"\include\libxml2 (
+rd /s /q "$(OutDir)"\include\libxml2
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -465,8 +465,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\libxml2 (
-rmdir /s /q $(OutDir)\include\libxml2
+      <Command>if exist "$(OutDir)"\include\libxml2 (
+rmdir /s /q "$(OutDir)"\include\libxml2
 )
 if exist $(OutDir)\licenses\libxml2.txt (
 del /f /q $(OutDir)\licenses\libxml2.txt
@@ -496,11 +496,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <AdditionalLibraryDirectories>$(OutDir)\lib\x64\;$(ProjectDir)\..\..\prebuilt\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\libxml2
-mkdir $(OutDir)\include\libxml2\libxml
-copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
-copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\libxml2
+mkdir "$(OutDir)"\include\libxml2\libxml
+copy ..\include\libxml\*.h "$(OutDir)"\include\libxml2\libxml
+copy .\libxml\xmlversion.h "$(OutDir)"\include\libxml2\libxml
 mkdir $(OutDir)\licenses
 copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
@@ -511,8 +511,8 @@ del ..\config.h
 if exist ..\include\libxml\xmlversion.h (
 del ..\include\libxml\xmlversion.h
 )
-if exist $(OutDir)\include\libxml2 (
-rd /s /q $(OutDir)\include\libxml2
+if exist "$(OutDir)"\include\libxml2 (
+rd /s /q "$(OutDir)"\include\libxml2
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -522,8 +522,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\libxml2 (
-rmdir /s /q $(OutDir)\include\libxml2
+      <Command>if exist "$(OutDir)"\include\libxml2 (
+rmdir /s /q "$(OutDir)"\include\libxml2
 )
 if exist $(OutDir)\licenses\libxml2.txt (
 del /f /q $(OutDir)\licenses\libxml2.txt
@@ -557,11 +557,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\libxml2
-mkdir $(OutDir)\include\libxml2\libxml
-copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
-copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\libxml2
+mkdir "$(OutDir)"\include\libxml2\libxml
+copy ..\include\libxml\*.h "$(OutDir)"\include\libxml2\libxml
+copy .\libxml\xmlversion.h "$(OutDir)"\include\libxml2\libxml
 mkdir $(OutDir)\licenses
 copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
@@ -572,8 +572,8 @@ del ..\config.h
 if exist ..\include\libxml\xmlversion.h (
 del ..\include\libxml\xmlversion.h
 )
-if exist $(OutDir)\include\libxml2 (
-rd /s /q $(OutDir)\include\libxml2
+if exist "$(OutDir)"\include\libxml2 (
+rd /s /q "$(OutDir)"\include\libxml2
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -583,8 +583,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\libxml2 (
-rmdir /s /q $(OutDir)\include\libxml2
+      <Command>if exist "$(OutDir)"\include\libxml2 (
+rmdir /s /q "$(OutDir)"\include\libxml2
 )
 if exist $(OutDir)\licenses\libxml2.txt (
 del /f /q $(OutDir)\licenses\libxml2.txt
@@ -618,11 +618,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\libxml2
-mkdir $(OutDir)\include\libxml2\libxml
-copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
-copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\libxml2
+mkdir "$(OutDir)"\include\libxml2\libxml
+copy ..\include\libxml\*.h "$(OutDir)"\include\libxml2\libxml
+copy .\libxml\xmlversion.h "$(OutDir)"\include\libxml2\libxml
 mkdir $(OutDir)\licenses
 copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
@@ -633,8 +633,8 @@ del ..\config.h
 if exist ..\include\libxml\xmlversion.h (
 del ..\include\libxml\xmlversion.h
 )
-if exist $(OutDir)\include\libxml2 (
-rd /s /q $(OutDir)\include\libxml2
+if exist "$(OutDir)"\include\libxml2 (
+rd /s /q "$(OutDir)"\include\libxml2
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -644,8 +644,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\libxml2 (
-rmdir /s /q $(OutDir)\include\libxml2
+      <Command>if exist "$(OutDir)"\include\libxml2 (
+rmdir /s /q "$(OutDir)"\include\libxml2
 )
 if exist $(OutDir)\licenses\libxml2.txt (
 del /f /q $(OutDir)\licenses\libxml2.txt
@@ -678,11 +678,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\libxml2
-mkdir $(OutDir)\include\libxml2\libxml
-copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
-copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\libxml2
+mkdir "$(OutDir)"\include\libxml2\libxml
+copy ..\include\libxml\*.h "$(OutDir)"\include\libxml2\libxml
+copy .\libxml\xmlversion.h "$(OutDir)"\include\libxml2\libxml
 mkdir $(OutDir)\licenses
 copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
@@ -693,8 +693,8 @@ del ..\config.h
 if exist ..\include\libxml\xmlversion.h (
 del ..\include\libxml\xmlversion.h
 )
-if exist $(OutDir)\include\libxml2 (
-rd /s /q $(OutDir)\include\libxml2
+if exist "$(OutDir)"\include\libxml2 (
+rd /s /q "$(OutDir)"\include\libxml2
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -704,8 +704,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\libxml2 (
-rmdir /s /q $(OutDir)\include\libxml2
+      <Command>if exist "$(OutDir)"\include\libxml2 (
+rmdir /s /q "$(OutDir)"\include\libxml2
 )
 if exist $(OutDir)\licenses\libxml2.txt (
 del /f /q $(OutDir)\licenses\libxml2.txt
@@ -738,11 +738,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\libxml2
-mkdir $(OutDir)\include\libxml2\libxml
-copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
-copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\libxml2
+mkdir "$(OutDir)"\include\libxml2\libxml
+copy ..\include\libxml\*.h "$(OutDir)"\include\libxml2\libxml
+copy .\libxml\xmlversion.h "$(OutDir)"\include\libxml2\libxml
 mkdir $(OutDir)\licenses
 copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
@@ -753,8 +753,8 @@ del ..\config.h
 if exist ..\include\libxml\xmlversion.h (
 del ..\include\libxml\xmlversion.h
 )
-if exist $(OutDir)\include\libxml2 (
-rd /s /q $(OutDir)\include\libxml2
+if exist "$(OutDir)"\include\libxml2 (
+rd /s /q "$(OutDir)"\include\libxml2
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -764,8 +764,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\libxml2 (
-rmdir /s /q $(OutDir)\include\libxml2
+      <Command>if exist "$(OutDir)"\include\libxml2 (
+rmdir /s /q "$(OutDir)"\include\libxml2
 )
 if exist $(OutDir)\licenses\libxml2.txt (
 del /f /q $(OutDir)\licenses\libxml2.txt
@@ -806,11 +806,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <AdditionalLibraryDirectories>$(OutDir)\lib\x86\;$(ProjectDir)\..\..\prebuilt\lib\x86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\libxml2
-mkdir $(OutDir)\include\libxml2\libxml
-copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
-copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\libxml2
+mkdir "$(OutDir)"\include\libxml2\libxml
+copy ..\include\libxml\*.h "$(OutDir)"\include\libxml2\libxml
+copy .\libxml\xmlversion.h "$(OutDir)"\include\libxml2\libxml
 mkdir $(OutDir)\licenses
 copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
@@ -821,8 +821,8 @@ del ..\config.h
 if exist ..\include\libxml\xmlversion.h (
 del ..\include\libxml\xmlversion.h
 )
-if exist $(OutDir)\include\libxml2 (
-rd /s /q $(OutDir)\include\libxml2
+if exist "$(OutDir)"\include\libxml2 (
+rd /s /q "$(OutDir)"\include\libxml2
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -832,8 +832,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\libxml2 (
-rmdir /s /q $(OutDir)\include\libxml2
+      <Command>if exist "$(OutDir)"\include\libxml2 (
+rmdir /s /q "$(OutDir)"\include\libxml2
 )
 if exist $(OutDir)\licenses\libxml2.txt (
 del /f /q $(OutDir)\licenses\libxml2.txt
@@ -874,11 +874,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <AdditionalLibraryDirectories>$(OutDir)\lib\x86\;$(ProjectDir)\..\..\prebuilt\lib\x86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\libxml2
-mkdir $(OutDir)\include\libxml2\libxml
-copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
-copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\libxml2
+mkdir "$(OutDir)"\include\libxml2\libxml
+copy ..\include\libxml\*.h "$(OutDir)"\include\libxml2\libxml
+copy .\libxml\xmlversion.h "$(OutDir)"\include\libxml2\libxml
 mkdir $(OutDir)\licenses
 copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
@@ -889,8 +889,8 @@ del ..\config.h
 if exist ..\include\libxml\xmlversion.h (
 del ..\include\libxml\xmlversion.h
 )
-if exist $(OutDir)\include\libxml2 (
-rd /s /q $(OutDir)\include\libxml2
+if exist "$(OutDir)"\include\libxml2 (
+rd /s /q "$(OutDir)"\include\libxml2
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -900,8 +900,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\libxml2 (
-rmdir /s /q $(OutDir)\include\libxml2
+      <Command>if exist "$(OutDir)"\include\libxml2 (
+rmdir /s /q "$(OutDir)"\include\libxml2
 )
 if exist $(OutDir)\licenses\libxml2.txt (
 del /f /q $(OutDir)\licenses\libxml2.txt
@@ -942,11 +942,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <AdditionalLibraryDirectories>$(OutDir)\lib\x64\;$(ProjectDir)\..\..\prebuilt\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\libxml2
-mkdir $(OutDir)\include\libxml2\libxml
-copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
-copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\libxml2
+mkdir "$(OutDir)"\include\libxml2\libxml
+copy ..\include\libxml\*.h "$(OutDir)"\include\libxml2\libxml
+copy .\libxml\xmlversion.h "$(OutDir)"\include\libxml2\libxml
 mkdir $(OutDir)\licenses
 copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
@@ -957,8 +957,8 @@ del ..\config.h
 if exist ..\include\libxml\xmlversion.h (
 del ..\include\libxml\xmlversion.h
 )
-if exist $(OutDir)\include\libxml2 (
-rd /s /q $(OutDir)\include\libxml2
+if exist "$(OutDir)"\include\libxml2 (
+rd /s /q "$(OutDir)"\include\libxml2
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -968,8 +968,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\libxml2 (
-rmdir /s /q $(OutDir)\include\libxml2
+      <Command>if exist "$(OutDir)"\include\libxml2 (
+rmdir /s /q "$(OutDir)"\include\libxml2
 )
 if exist $(OutDir)\licenses\libxml2.txt (
 del /f /q $(OutDir)\licenses\libxml2.txt
@@ -1010,11 +1010,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <AdditionalLibraryDirectories>$(OutDir)\lib\x64\;$(ProjectDir)\..\..\prebuilt\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\libxml2
-mkdir $(OutDir)\include\libxml2\libxml
-copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
-copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\libxml2
+mkdir "$(OutDir)"\include\libxml2\libxml
+copy ..\include\libxml\*.h "$(OutDir)"\include\libxml2\libxml
+copy .\libxml\xmlversion.h "$(OutDir)"\include\libxml2\libxml
 mkdir $(OutDir)\licenses
 copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
@@ -1025,8 +1025,8 @@ del ..\config.h
 if exist ..\include\libxml\xmlversion.h (
 del ..\include\libxml\xmlversion.h
 )
-if exist $(OutDir)\include\libxml2 (
-rd /s /q $(OutDir)\include\libxml2
+if exist "$(OutDir)"\include\libxml2 (
+rd /s /q "$(OutDir)"\include\libxml2
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -1036,8 +1036,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\libxml2 (
-rmdir /s /q $(OutDir)\include\libxml2
+      <Command>if exist "$(OutDir)"\include\libxml2 (
+rmdir /s /q "$(OutDir)"\include\libxml2
 )
 if exist $(OutDir)\licenses\libxml2.txt (
 del /f /q $(OutDir)\licenses\libxml2.txt
@@ -1079,11 +1079,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\libxml2
-mkdir $(OutDir)\include\libxml2\libxml
-copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
-copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\libxml2
+mkdir "$(OutDir)"\include\libxml2\libxml
+copy ..\include\libxml\*.h "$(OutDir)"\include\libxml2\libxml
+copy .\libxml\xmlversion.h "$(OutDir)"\include\libxml2\libxml
 mkdir $(OutDir)\licenses
 copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
@@ -1094,8 +1094,8 @@ del ..\config.h
 if exist ..\include\libxml\xmlversion.h (
 del ..\include\libxml\xmlversion.h
 )
-if exist $(OutDir)\include\libxml2 (
-rd /s /q $(OutDir)\include\libxml2
+if exist "$(OutDir)"\include\libxml2 (
+rd /s /q "$(OutDir)"\include\libxml2
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -1105,8 +1105,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\libxml2 (
-rmdir /s /q $(OutDir)\include\libxml2
+      <Command>if exist "$(OutDir)"\include\libxml2 (
+rmdir /s /q "$(OutDir)"\include\libxml2
 )
 if exist $(OutDir)\licenses\libxml2.txt (
 del /f /q $(OutDir)\licenses\libxml2.txt
@@ -1148,11 +1148,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\libxml2
-mkdir $(OutDir)\include\libxml2\libxml
-copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
-copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\libxml2
+mkdir "$(OutDir)"\include\libxml2\libxml
+copy ..\include\libxml\*.h "$(OutDir)"\include\libxml2\libxml
+copy .\libxml\xmlversion.h "$(OutDir)"\include\libxml2\libxml
 mkdir $(OutDir)\licenses
 copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
@@ -1163,8 +1163,8 @@ del ..\config.h
 if exist ..\include\libxml\xmlversion.h (
 del ..\include\libxml\xmlversion.h
 )
-if exist $(OutDir)\include\libxml2 (
-rd /s /q $(OutDir)\include\libxml2
+if exist "$(OutDir)"\include\libxml2 (
+rd /s /q "$(OutDir)"\include\libxml2
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -1174,8 +1174,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\libxml2 (
-rmdir /s /q $(OutDir)\include\libxml2
+      <Command>if exist "$(OutDir)"\include\libxml2 (
+rmdir /s /q "$(OutDir)"\include\libxml2
 )
 if exist $(OutDir)\licenses\libxml2.txt (
 del /f /q $(OutDir)\licenses\libxml2.txt
@@ -1216,11 +1216,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\libxml2
-mkdir $(OutDir)\include\libxml2\libxml
-copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
-copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\libxml2
+mkdir "$(OutDir)"\include\libxml2\libxml
+copy ..\include\libxml\*.h "$(OutDir)"\include\libxml2\libxml
+copy .\libxml\xmlversion.h "$(OutDir)"\include\libxml2\libxml
 mkdir $(OutDir)\licenses
 copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
@@ -1231,8 +1231,8 @@ del ..\config.h
 if exist ..\include\libxml\xmlversion.h (
 del ..\include\libxml\xmlversion.h
 )
-if exist $(OutDir)\include\libxml2 (
-rd /s /q $(OutDir)\include\libxml2
+if exist "$(OutDir)"\include\libxml2 (
+rd /s /q "$(OutDir)"\include\libxml2
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -1242,8 +1242,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\libxml2 (
-rmdir /s /q $(OutDir)\include\libxml2
+      <Command>if exist "$(OutDir)"\include\libxml2 (
+rmdir /s /q "$(OutDir)"\include\libxml2
 )
 if exist $(OutDir)\licenses\libxml2.txt (
 del /f /q $(OutDir)\licenses\libxml2.txt
@@ -1284,11 +1284,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\libxml2
-mkdir $(OutDir)\include\libxml2\libxml
-copy ..\include\libxml\*.h $(OutDir)\include\libxml2\libxml
-copy .\libxml\xmlversion.h $(OutDir)\include\libxml2\libxml
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\libxml2
+mkdir "$(OutDir)"\include\libxml2\libxml
+copy ..\include\libxml\*.h "$(OutDir)"\include\libxml2\libxml
+copy .\libxml\xmlversion.h "$(OutDir)"\include\libxml2\libxml
 mkdir $(OutDir)\licenses
 copy ..\Copyright $(OutDir)\licenses\libxml2.txt</Command>
     </PostBuildEvent>
@@ -1299,8 +1299,8 @@ del ..\config.h
 if exist ..\include\libxml\xmlversion.h (
 del ..\include\libxml\xmlversion.h
 )
-if exist $(OutDir)\include\libxml2 (
-rd /s /q $(OutDir)\include\libxml2
+if exist "$(OutDir)"\include\libxml2 (
+rd /s /q "$(OutDir)"\include\libxml2
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -1310,8 +1310,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\libxml2 (
-rmdir /s /q $(OutDir)\include\libxml2
+      <Command>if exist "$(OutDir)"\include\libxml2 (
+rmdir /s /q "$(OutDir)"\include\libxml2
 )
 if exist $(OutDir)\licenses\libxml2.txt (
 del /f /q $(OutDir)\licenses\libxml2.txt
