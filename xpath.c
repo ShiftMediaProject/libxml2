@@ -1678,10 +1678,17 @@ xmlXPathDebugDumpCompExpr(FILE *output, xmlXPathCompExprPtr comp,
 
     fprintf(output, "%s", shift);
 
-    fprintf(output, "Compiled Expression : %d elements\n",
-	    comp->nbStep);
-    i = comp->last;
-    xmlXPathDebugDumpStepOp(output, comp, &comp->steps[i], depth + 1);
+#ifdef XPATH_STREAMING
+    if (comp->stream) {
+        fprintf(output, "Streaming Expression\n");
+    } else
+#endif
+    {
+        fprintf(output, "Compiled Expression : %d elements\n",
+                comp->nbStep);
+        i = comp->last;
+        xmlXPathDebugDumpStepOp(output, comp, &comp->steps[i], depth + 1);
+    }
 }
 
 #ifdef XP_DEBUG_OBJ_USAGE
@@ -11925,11 +11932,11 @@ xmlXPathCompOpEvalPositionalPredicate(xmlXPathParserContextPtr ctxt,
 		}
 	    }
 
-            frame = xmlXPathSetFrame(ctxt);
 	    valuePush(ctxt, contextObj);
+            frame = xmlXPathSetFrame(ctxt);
 	    res = xmlXPathCompOpEvalToBoolean(ctxt, exprOp, 1);
-            tmp = valuePop(ctxt);
             xmlXPathPopFrame(ctxt, frame);
+            tmp = valuePop(ctxt);
 
 	    if ((ctxt->error != XPATH_EXPRESSION_OK) || (res == -1)) {
                 while (tmp != contextObj) {
@@ -13524,10 +13531,8 @@ xmlXPathCompOpEval(xmlXPathParserContextPtr ctxt, xmlXPathStepOpPtr op)
                         xmlXPathCompOpEval(ctxt, &comp->steps[op->ch1]);
                 if (op->value5 == NULL) {
 		    val = xmlXPathVariableLookup(ctxt->context, op->value4);
-		    if (val == NULL) {
-			ctxt->error = XPATH_UNDEF_VARIABLE_ERROR;
-			return(0);
-		    }
+		    if (val == NULL)
+			XP_ERROR0(XPATH_UNDEF_VARIABLE_ERROR);
                     valuePush(ctxt, val);
 		} else {
                     const xmlChar *URI;
@@ -13542,10 +13547,8 @@ xmlXPathCompOpEval(xmlXPathParserContextPtr ctxt, xmlXPathStepOpPtr op)
                     }
 		    val = xmlXPathVariableLookupNS(ctxt->context,
                                                        op->value4, URI);
-		    if (val == NULL) {
-			ctxt->error = XPATH_UNDEF_VARIABLE_ERROR;
-			return(0);
-		    }
+		    if (val == NULL)
+			XP_ERROR0(XPATH_UNDEF_VARIABLE_ERROR);
                     valuePush(ctxt, val);
                 }
                 return (total);
