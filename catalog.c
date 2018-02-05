@@ -3124,7 +3124,7 @@ xmlInitializeCatalog(void) {
 #if defined(_WIN32) && defined(_MSC_VER)
     {
 		void* hmodule;
-		hmodule = GetModuleHandleA("libxml2.dll");
+		hmodule = GetModuleHandleA("xml2.dll");
 		if (hmodule == NULL)
 			hmodule = GetModuleHandleA(NULL);
 		if (hmodule != NULL) {
