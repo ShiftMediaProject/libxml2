@@ -16,6 +16,9 @@
     <Filter Include="Header Files\include\libxml2">
       <UniqueIdentifier>{d4f63c8a-5932-41e1-ba6e-ba979064954e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{cc4faa83-628a-451e-951e-cd0e54d8c029}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\xmlcatalog.c">
@@ -311,5 +314,10 @@
     <ClInclude Include="..\include\libxml\list.h">
       <Filter>Header Files\include\libxml2</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\win32\libxml2.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

@@ -167,6 +167,13 @@
     <ClInclude Include="config.h" />
     <ClInclude Include="libxml\xmlversion.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\win32\libxml2.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseLTO'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CFE70273-7A79-4815-AF95-1E02E2675E37}</ProjectGuid>
     <RootNamespace>libxml2</RootNamespace>

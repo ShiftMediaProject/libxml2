@@ -2,9 +2,6 @@
 /* Type cast for the gethostbyname() argument */
 #define GETHOSTBYNAME_ARG_CAST (char *)
 
-/* Define to 1 if you have the <ansidecl.h> header file. */
-/* #undef HAVE_ANSIDECL_H */
-
 /* Define to 1 if you have the <arpa/inet.h> header file. */
 /* #undef HAVE_ARPA_INET_H */
 
@@ -13,9 +10,6 @@
 
 /* Whether struct sockaddr::__ss_family exists */
 /* #undef HAVE_BROKEN_SS_FAMILY */
-
-/* Define to 1 if you have the `class' function. */
-/* #undef HAVE_CLASS */
 
 /* Define to 1 if you have the <ctype.h> header file. */
 #define HAVE_CTYPE_H 1
@@ -38,23 +32,11 @@
 /* Define to 1 if you have the <fcntl.h> header file. */
 #define HAVE_FCNTL_H 1
 
-/* Define to 1 if you have the `finite' function. */
-#define HAVE_FINITE 1
-
 /* Define to 1 if you have the <float.h> header file. */
 #define HAVE_FLOAT_H 1
 
-/* Define to 1 if you have the `fpclass' function. */
-#define HAVE_FPCLASS 1
-
 /* Define to 1 if you have the `fprintf' function. */
 #define HAVE_FPRINTF 1
-
-/* Define to 1 if you have the `fp_class' function. */
-/* #undef HAVE_FP_CLASS */
-
-/* Define to 1 if you have the <fp_class.h> header file. */
-/* #undef HAVE_FP_CLASS_H */
 
 /* Define to 1 if you have the `ftime' function. */
 #define HAVE_FTIME 1
@@ -64,9 +46,6 @@
 
 /* Define to 1 if you have the `gettimeofday' function. */
 #define HAVE_GETTIMEOFDAY 1
-
-/* Define to 1 if you have the <ieeefp.h> header file. */
-/* #undef HAVE_IEEEFP_H */
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
@@ -126,9 +105,6 @@
 #if defined(HAVE_MMAP) && !defined(HAVE_MUNMAP)
 #  undef /**/ HAVE_MMAP
 #endif
-
-/* Define to 1 if you have the <nan.h> header file. */
-/* #undef HAVE_NAN_H */
 
 /* Define to 1 if you have the <ndir.h> header file, and it defines `DIR'. */
 /* #undef HAVE_NDIR_H */
@@ -194,12 +170,6 @@
 /* Define to 1 if you have the <stdlib.h> header file. */
 #define HAVE_STDLIB_H 1
 
-/* Define to 1 if you have the `strdup' function. */
-#define HAVE_STRDUP 1
-
-/* Define to 1 if you have the `strerror' function. */
-#define HAVE_STRERROR 1
-
 /* Define to 1 if you have the `strftime' function. */
 #define HAVE_STRFTIME 1
 
@@ -208,9 +178,6 @@
 
 /* Define to 1 if you have the <string.h> header file. */
 #define HAVE_STRING_H 1
-
-/* Define to 1 if you have the `strndup' function. */
-/* #undef HAVE_STRNDUP */
 
 /* Define to 1 if you have the <sys/dir.h> header file, and it defines `DIR'.
    */
