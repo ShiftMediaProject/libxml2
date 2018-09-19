@@ -314,7 +314,15 @@ xmlModulePlatformSymbol(void *handle, const char *name, void **symbol)
 static void *
 xmlModulePlatformOpen(const char *name)
 {
+#if defined(WINAPI_FAMILY_PARTITION) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+    WCHAR wlpName[MAX_PATH];
+    if (MultiByteToWideChar(CP_UTF8, 0, name, -1, wlpName, MAX_PATH) == 0) {
+        return NULL;
+    }
+    return LoadPackagedLibrary(wlpName, 0);
+#else
     return LoadLibraryA(name);
+#endif
 }
 
 /*

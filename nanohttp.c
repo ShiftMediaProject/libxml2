@@ -77,6 +77,13 @@
 #include <wsockcompat.h>
 #endif
 
+#if defined(_WIN32) && defined(_MSC_VER)
+#include <winapifamily.h>
+#if defined(WINAPI_FAMILY_PARTITION) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#define getenv(x) NULL
+#endif
+#endif
+
 #include <libxml/globals.h>
 #include <libxml/xmlerror.h>
 #include <libxml/xmlmemory.h>

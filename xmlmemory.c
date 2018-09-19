@@ -56,6 +56,13 @@ static xmlMutexPtr xmlMemMutex = NULL;
 
 void xmlMallocBreakpoint(void);
 
+#if defined(_WIN32) && defined(_MSC_VER)
+#include <winapifamily.h>
+#if defined(WINAPI_FAMILY_PARTITION) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#define getenv(x) NULL
+#endif
+#endif
+
 /************************************************************************
  *									*
  *		Macros, variables and associated types			*

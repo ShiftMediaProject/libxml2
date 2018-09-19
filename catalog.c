@@ -77,6 +77,10 @@
 #endif
 
 #if defined(_WIN32) && defined(_MSC_VER)
+#include <winapifamily.h>
+#if defined(WINAPI_FAMILY_PARTITION) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#define getenv(x) NULL
+#endif
 #undef XML_XML_DEFAULT_CATALOG
 static char XML_XML_DEFAULT_CATALOG[256] = "file:///etc/xml/catalog";
 #if defined(_WIN32_WCE)
@@ -3124,12 +3128,17 @@ xmlInitializeCatalog(void) {
 
 	catalogs = (const char *) getenv("XML_CATALOG_FILES");
 	if (catalogs == NULL)
-#if defined(_WIN32) && defined(_MSC_VER)
+#if defined(_WIN32) && defined(_MSC_VER) && (!defined(WINAPI_FAMILY_PARTITION) || !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) || WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP))
     {
 		void* hmodule;
-		hmodule = GetModuleHandleA("xml2.dll");
+#   ifdef _DEBUG
+#       define LIBXML2_MODULE L"xml2d.dll"
+#   else
+#       define LIBXML2_MODULE L"xml2.dll"
+#   endif
+        hmodule = GetModuleHandleW(LIBXML2_MODULE);
 		if (hmodule == NULL)
-			hmodule = GetModuleHandleA(NULL);
+			hmodule = GetModuleHandleW(NULL);
 		if (hmodule != NULL) {
 			char buf[256];
 			unsigned long len = GetModuleFileNameA(hmodule, buf, 255);

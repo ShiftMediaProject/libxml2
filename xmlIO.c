@@ -49,6 +49,13 @@
 #include <winnls.h> /* for CP_UTF8 */
 #endif
 
+#if defined(_WIN32) && defined(_MSC_VER)
+#include <winapifamily.h>
+#if defined(WINAPI_FAMILY_PARTITION) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#define getenv(x) NULL
+#endif
+#endif
+
 #ifndef S_ISDIR
 #  ifdef _S_ISDIR
 #    define S_ISDIR(x) _S_ISDIR(x)
@@ -3739,11 +3746,13 @@ xmlParserGetDirectory(const char *filename) {
         if (cur == dir) dir[1] = 0;
 	else *cur = 0;
 	ret = xmlMemStrdup(dir);
+#if !defined(WINAPI_FAMILY_PARTITION) || !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) || WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
     } else {
         if (getcwd(dir, 1024) != NULL) {
 	    dir[1023] = 0;
 	    ret = xmlMemStrdup(dir);
 	}
+#endif
     }
     return(ret);
 #undef IS_XMLPGD_SEP
