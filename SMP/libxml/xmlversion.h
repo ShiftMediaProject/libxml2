@@ -405,7 +405,7 @@ XMLPUBFUN void XMLCALL xmlCheckVersion(int version);
  *
  * Whether the Lzma support is compiled in
  */
-#if 0
+#if 1
 #define LIBXML_LZMA_ENABLED
 #endif
 
