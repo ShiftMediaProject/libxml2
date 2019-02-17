@@ -3164,7 +3164,7 @@ xmlParserInputBufferPush(xmlParserInputBufferPtr in,
 	 * convert as much as possible to the parser reading buffer.
 	 */
 	use = xmlBufUse(in->raw);
-	nbchars = xmlCharEncInput(in, 0);
+	nbchars = xmlCharEncInput(in, 1);
 	if (nbchars < 0) {
 	    xmlIOErr(XML_IO_ENCODER, NULL);
 	    in->error = XML_IO_ENCODER;
@@ -3280,7 +3280,7 @@ xmlParserInputBufferGrow(xmlParserInputBufferPtr in, int len) {
 	 * convert as much as possible to the parser reading buffer.
 	 */
 	use = xmlBufUse(in->raw);
-	nbchars = xmlCharEncInput(in, 0);
+	nbchars = xmlCharEncInput(in, 1);
 	if (nbchars < 0) {
 	    xmlIOErr(XML_IO_ENCODER, NULL);
 	    in->error = XML_IO_ENCODER;
