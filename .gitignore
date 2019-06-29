@@ -125,3 +125,4 @@ xstc/Tests
 xstc/xsts-*.tar.gz
 
 compile
+!/SMP/SMP.patch
