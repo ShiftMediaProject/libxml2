@@ -11,10 +11,10 @@ __docbDefaultSAXHandler
 docbDefaultSAXHandler DATA
 #endif
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 emptyExp DATA
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 forbiddenExp DATA
 #endif
 #ifdef LIBXML_THREAD_ENABLED
@@ -803,61 +803,61 @@ xmlEncodeEntities
 xmlEncodeEntitiesReentrant
 xmlEncodeSpecialChars
 xmlErrMemory
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpCtxtNbCons
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpCtxtNbNodes
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpDump
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpExpDerive
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpFree
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpFreeCtxt
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpGetLanguage
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpGetStart
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpIsNillable
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpMaxToken
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpNewAtom
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpNewCtxt
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpNewOr
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpNewRange
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpNewSeq
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpParse
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpRef
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpStringDerive
 #endif
-#ifdef LIBXML_REGEXP_ENABLED
+#ifdef LIBXML_EXPR_ENABLED
 xmlExpSubsume
 #endif
 xmlFileClose
