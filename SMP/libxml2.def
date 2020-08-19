@@ -1,4 +1,4 @@
-LIBRARY libxml2
+
 EXPORTS
 __docbDefaultSAXHandler
 __htmlDefaultSAXHandler
