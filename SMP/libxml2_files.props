@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\buf.c" />
+    <ClCompile Include="..\c14n.c" />
+    <ClCompile Include="..\catalog.c">
+      <ForcedIncludeFiles>io.h;windows.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="..\chvalid.c" />
+    <ClCompile Include="..\debugXML.c" />
+    <ClCompile Include="..\dict.c" />
+    <ClCompile Include="..\DOCBparser.c" />
+    <ClCompile Include="..\encoding.c" />
+    <ClCompile Include="..\entities.c" />
+    <ClCompile Include="..\error.c" />
+    <ClCompile Include="..\globals.c" />
+    <ClCompile Include="..\hash.c" />
+    <ClCompile Include="..\HTMLparser.c" />
+    <ClCompile Include="..\HTMLtree.c" />
+    <ClCompile Include="..\legacy.c" />
+    <ClCompile Include="..\list.c" />
+    <ClCompile Include="..\nanoftp.c" />
+    <ClCompile Include="..\nanohttp.c">
+      <ForcedIncludeFiles>io.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="..\parser.c" />
+    <ClCompile Include="..\parserInternals.c" />
+    <ClCompile Include="..\pattern.c" />
+    <ClCompile Include="..\relaxng.c" />
+    <ClCompile Include="..\SAX.c" />
+    <ClCompile Include="..\SAX2.c" />
+    <ClCompile Include="..\schematron.c" />
+    <ClCompile Include="..\threads.c" />
+    <ClCompile Include="..\tree.c" />
+    <ClCompile Include="..\uri.c" />
+    <ClCompile Include="..\valid.c" />
+    <ClCompile Include="..\xinclude.c" />
+    <ClCompile Include="..\xlink.c" />
+    <ClCompile Include="..\xmlcatalog.c" />
+    <ClCompile Include="..\xmlIO.c">
+      <ForcedIncludeFiles>io.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="..\xmlmemory.c" />
+    <ClCompile Include="..\xmlmodule.c" />
+    <ClCompile Include="..\xmlreader.c" />
+    <ClCompile Include="..\xmlregexp.c" />
+    <ClCompile Include="..\xmlsave.c" />
+    <ClCompile Include="..\xmlschemas.c" />
+    <ClCompile Include="..\xmlschemastypes.c" />
+    <ClCompile Include="..\xmlstring.c" />
+    <ClCompile Include="..\xmlunicode.c" />
+    <ClCompile Include="..\xmlwriter.c" />
+    <ClCompile Include="..\xpath.c" />
+    <ClCompile Include="..\xpointer.c" />
+    <ClCompile Include="..\xzlib.c">
+      <ForcedIncludeFiles>io.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\buf.h" />
+    <ClInclude Include="..\elfgcchack.h" />
+    <ClInclude Include="..\include\libxml\c14n.h" />
+    <ClInclude Include="..\include\libxml\catalog.h" />
+    <ClInclude Include="..\include\libxml\chvalid.h" />
+    <ClInclude Include="..\include\libxml\debugXML.h" />
+    <ClInclude Include="..\include\libxml\dict.h" />
+    <ClInclude Include="..\include\libxml\DOCBparser.h" />
+    <ClInclude Include="..\include\libxml\encoding.h" />
+    <ClInclude Include="..\include\libxml\entities.h" />
+    <ClInclude Include="..\include\libxml\globals.h" />
+    <ClInclude Include="..\include\libxml\hash.h" />
+    <ClInclude Include="..\include\libxml\HTMLparser.h" />
+    <ClInclude Include="..\include\libxml\HTMLtree.h" />
+    <ClInclude Include="..\include\libxml\list.h" />
+    <ClInclude Include="..\include\libxml\nanoftp.h" />
+    <ClInclude Include="..\include\libxml\nanohttp.h" />
+    <ClInclude Include="..\include\libxml\parser.h" />
+    <ClInclude Include="..\include\libxml\parserInternals.h" />
+    <ClInclude Include="..\include\libxml\pattern.h" />
+    <ClInclude Include="..\include\libxml\relaxng.h" />
+    <ClInclude Include="..\include\libxml\SAX.h" />
+    <ClInclude Include="..\include\libxml\SAX2.h" />
+    <ClInclude Include="..\include\libxml\schemasInternals.h" />
+    <ClInclude Include="..\include\libxml\schematron.h" />
+    <ClInclude Include="..\include\libxml\threads.h" />
+    <ClInclude Include="..\include\libxml\tree.h" />
+    <ClInclude Include="..\include\libxml\uri.h" />
+    <ClInclude Include="..\include\libxml\valid.h" />
+    <ClInclude Include="..\include\libxml\xinclude.h" />
+    <ClInclude Include="..\include\libxml\xlink.h" />
+    <ClInclude Include="..\include\libxml\xmlautomata.h" />
+    <ClInclude Include="..\include\libxml\xmlerror.h" />
+    <ClInclude Include="..\include\libxml\xmlexports.h" />
+    <ClInclude Include="..\include\libxml\xmlIO.h" />
+    <ClInclude Include="..\include\libxml\xmlmemory.h" />
+    <ClInclude Include="..\include\libxml\xmlmodule.h" />
+    <ClInclude Include="..\include\libxml\xmlreader.h" />
+    <ClInclude Include="..\include\libxml\xmlregexp.h" />
+    <ClInclude Include="..\include\libxml\xmlsave.h" />
+    <ClInclude Include="..\include\libxml\xmlschemas.h" />
+    <ClInclude Include="..\include\libxml\xmlschemastypes.h" />
+    <ClInclude Include="..\include\libxml\xmlstring.h" />
+    <ClInclude Include="..\include\libxml\xmlunicode.h" />
+    <ClInclude Include="..\include\libxml\xmlwriter.h" />
+    <ClInclude Include="..\include\libxml\xpath.h" />
+    <ClInclude Include="..\include\libxml\xpathInternals.h" />
+    <ClInclude Include="..\include\libxml\xpointer.h" />
+    <ClInclude Include="..\libxml.h" />
+    <ClInclude Include="..\xzlib.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="libxml\xmlversion.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\win32\libxml2.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='DebugWinRT'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseWinRT'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libxml2.def" />
+  </ItemGroup>
+</Project>

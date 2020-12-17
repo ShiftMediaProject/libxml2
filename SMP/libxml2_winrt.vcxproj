@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{CFE70273-7A79-4815-AF95-1E02E2675E37}</ProjectGuid>
+    <ProjectGuid>{AFE70273-7A79-4815-AF95-1E02E2675E37}</ProjectGuid>
     <RootNamespace>xml2</RootNamespace>
   </PropertyGroup>
   <ImportGroup Label="PropertySheets">
-    <Import Project="smp_deps.props" />
+    <Import Project="smp_winrt_deps.props" />
     <Import Project="libxml2_files.props" />
   </ImportGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugWinRT|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
-      <AdditionalDependencies>libzlibd.lib;libiconvd.lib;liblzmad.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libzlibd_winrt.lib;libiconvd_winrt.lib;liblzmad_winrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
@@ -53,14 +53,14 @@ del /f /q $(OutDir)\licenses\libxml2.txt
 )</Command>
     </CustomBuildStep>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugWinRT|x64'">
     <ClCompile>
       <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
-      <AdditionalDependencies>libzlibd.lib;libiconvd.lib;liblzmad.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libzlibd_winrt.lib;libiconvd_winrt.lib;liblzmad_winrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
@@ -98,15 +98,15 @@ del /f /q $(OutDir)\licenses\libxml2.txt
 )</Command>
     </CustomBuildStep>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLLWinRT|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>libxml2.def</ModuleDefinitionFile>
-      <AdditionalDependencies>zlibd.lib;iconvd.lib;lzmad.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>zlibd_winrt.lib;iconvd_winrt.lib;lzmad_winrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
@@ -144,15 +144,15 @@ del /f /q $(OutDir)\licenses\libxml2.txt
 )</Command>
     </CustomBuildStep>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLLWinRT|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>libxml2.def</ModuleDefinitionFile>
-      <AdditionalDependencies>zlibd.lib;iconvd.lib;lzmad.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>zlibd_winrt.lib;iconvd_winrt.lib;lzmad_winrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
@@ -190,14 +190,14 @@ del /f /q $(OutDir)\licenses\libxml2.txt
 )</Command>
     </CustomBuildStep>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWinRT|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
-      <AdditionalDependencies>libzlib.lib;libiconv.lib;liblzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libzlib_winrt.lib;libiconv_winrt.lib;liblzma_winrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
@@ -235,14 +235,14 @@ del /f /q $(OutDir)\licenses\libxml2.txt
 )</Command>
     </CustomBuildStep>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWinRT|x64'">
     <ClCompile>
       <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
-      <AdditionalDependencies>libzlib.lib;libiconv.lib;liblzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libzlib_winrt.lib;libiconv_winrt.lib;liblzma_winrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
@@ -280,15 +280,15 @@ del /f /q $(OutDir)\licenses\libxml2.txt
 )</Command>
     </CustomBuildStep>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLWinRT|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>libxml2.def</ModuleDefinitionFile>
-      <AdditionalDependencies>zlib.lib;iconv.lib;lzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>zlib_winrt.lib;iconv_winrt.lib;lzma_winrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
@@ -326,15 +326,15 @@ del /f /q $(OutDir)\licenses\libxml2.txt
 )</Command>
     </CustomBuildStep>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLStaticDeps|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLWinRTStaticDeps|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>libxml2.def</ModuleDefinitionFile>
-      <AdditionalDependencies>libzlib.lib;libiconv.lib;liblzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libzlib_winrt.lib;libiconv_winrt.lib;liblzma_winrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
@@ -372,15 +372,15 @@ del /f /q $(OutDir)\licenses\libxml2.txt
 )</Command>
     </CustomBuildStep>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLWinRT|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>libxml2.def</ModuleDefinitionFile>
-      <AdditionalDependencies>zlib.lib;iconv.lib;lzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>zlib_winrt.lib;iconv_winrt.lib;lzma_winrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
@@ -418,15 +418,15 @@ del /f /q $(OutDir)\licenses\libxml2.txt
 )</Command>
     </CustomBuildStep>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLStaticDeps|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLWinRTStaticDeps|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <ModuleDefinitionFile>libxml2.def</ModuleDefinitionFile>
-      <AdditionalDependencies>libzlib.lib;libiconv.lib;liblzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libzlib_winrt.lib;libiconv_winrt.lib;liblzma_winrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
