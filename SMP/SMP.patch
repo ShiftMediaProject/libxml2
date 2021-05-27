@@ -1,5 +1,5 @@
 diff --git a/catalog.c b/catalog.c
-index 7328fd31..ab1b7492 100644
+index effbb2e6..f450c688 100644
 --- a/catalog.c
 +++ b/catalog.c
 @@ -77,6 +77,10 @@
@@ -13,7 +13,7 @@ index 7328fd31..ab1b7492 100644
  #undef XML_XML_DEFAULT_CATALOG
  static char XML_XML_DEFAULT_CATALOG[256] = "file:///etc/xml/catalog";
  #if defined(_WIN32_WCE)
-@@ -3124,12 +3128,17 @@ xmlInitializeCatalog(void) {
+@@ -3123,12 +3127,17 @@ xmlInitializeCatalog(void) {
  
  	catalogs = (const char *) getenv("XML_CATALOG_FILES");
  	if (catalogs == NULL)
@@ -35,7 +35,7 @@ index 7328fd31..ab1b7492 100644
  			char buf[256];
  			unsigned long len = GetModuleFileNameA(hmodule, buf, 255);
 diff --git a/nanohttp.c b/nanohttp.c
-index 018b7e18..68930397 100644
+index 8e840f58..1777960b 100644
 --- a/nanohttp.c
 +++ b/nanohttp.c
 @@ -77,6 +77,13 @@
@@ -52,8 +52,106 @@ index 018b7e18..68930397 100644
  #include <libxml/globals.h>
  #include <libxml/xmlerror.h>
  #include <libxml/xmlmemory.h>
+diff --git a/win32/libxml2.def.src b/win32/libxml2.def.src
+index 1e771e85..47ae6a58 100644
+--- a/win32/libxml2.def.src
++++ b/win32/libxml2.def.src
+@@ -11,10 +11,10 @@ __docbDefaultSAXHandler
+ docbDefaultSAXHandler DATA
+ #endif
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ emptyExp DATA
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ forbiddenExp DATA
+ #endif
+ #ifdef LIBXML_THREAD_ENABLED
+@@ -803,61 +803,61 @@ xmlEncodeEntities
+ xmlEncodeEntitiesReentrant
+ xmlEncodeSpecialChars
+ xmlErrMemory
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpCtxtNbCons
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpCtxtNbNodes
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpDump
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpExpDerive
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpFree
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpFreeCtxt
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpGetLanguage
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpGetStart
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpIsNillable
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpMaxToken
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpNewAtom
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpNewCtxt
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpNewOr
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpNewRange
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpNewSeq
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpParse
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpRef
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpStringDerive
+ #endif
+-#ifdef LIBXML_REGEXP_ENABLED
++#ifdef LIBXML_EXPR_ENABLED
+ xmlExpSubsume
+ #endif
+ xmlFileClose
 diff --git a/xmlIO.c b/xmlIO.c
-index 752d5e0a..51fc8b96 100644
+index 57312b97..e2a879c7 100644
 --- a/xmlIO.c
 +++ b/xmlIO.c
 @@ -43,12 +43,20 @@
@@ -77,7 +175,7 @@ index 752d5e0a..51fc8b96 100644
  #ifndef S_ISDIR
  #  ifdef _S_ISDIR
  #    define S_ISDIR(x) _S_ISDIR(x)
-@@ -3762,11 +3770,13 @@ xmlParserGetDirectory(const char *filename) {
+@@ -3777,11 +3785,13 @@ xmlParserGetDirectory(const char *filename) {
          if (cur == dir) dir[1] = 0;
  	else *cur = 0;
  	ret = xmlMemStrdup(dir);
@@ -91,20 +189,8 @@ index 752d5e0a..51fc8b96 100644
      }
      return(ret);
  #undef IS_XMLPGD_SEP
-diff --git a/xmlcatalog.c b/xmlcatalog.c
-index c02b97f6..2039f9ce 100644
---- a/xmlcatalog.c
-+++ b/xmlcatalog.c
-@@ -6,6 +6,7 @@
-  * daniel@veillard.com
-  */
- 
-+#define IN_LIBXML
- #include "libxml.h"
- 
- #include <string.h>
 diff --git a/xmlmemory.c b/xmlmemory.c
-index 6f16c4b3..efed9920 100644
+index c51f49ae..5387917a 100644
 --- a/xmlmemory.c
 +++ b/xmlmemory.c
 @@ -56,6 +56,13 @@ static xmlMutexPtr xmlMemMutex = NULL;
