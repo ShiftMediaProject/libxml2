@@ -82,7 +82,7 @@ void xmlMallocBreakpoint(void);
 #endif
 
 /*
- * Each of the blocks allocated begin with a header containing informations
+ * Each of the blocks allocated begin with a header containing information
  */
 
 #define MEMTAG 0x5aa5
