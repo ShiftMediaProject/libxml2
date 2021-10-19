@@ -100,12 +100,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <ModuleDefinitionFile>libxml2.def</ModuleDefinitionFile>
       <AdditionalDependencies>zlibd.lib;iconvd.lib;lzmad.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
@@ -146,12 +145,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <ModuleDefinitionFile>libxml2.def</ModuleDefinitionFile>
       <AdditionalDependencies>zlibd.lib;iconvd.lib;lzmad.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
@@ -282,12 +280,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <ModuleDefinitionFile>libxml2.def</ModuleDefinitionFile>
       <AdditionalDependencies>zlib.lib;iconv.lib;lzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
@@ -328,12 +325,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLStaticDeps|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <ModuleDefinitionFile>libxml2.def</ModuleDefinitionFile>
       <AdditionalDependencies>libzlib.lib;libiconv.lib;liblzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
@@ -374,12 +370,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <ModuleDefinitionFile>libxml2.def</ModuleDefinitionFile>
       <AdditionalDependencies>zlib.lib;iconv.lib;lzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
@@ -420,12 +415,11 @@ del /f /q $(OutDir)\licenses\libxml2.txt
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLStaticDeps|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <ModuleDefinitionFile>libxml2.def</ModuleDefinitionFile>
       <AdditionalDependencies>libzlib.lib;libiconv.lib;liblzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>

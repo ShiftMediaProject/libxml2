@@ -118,7 +118,4 @@
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseWinRT'">true</ExcludedFromBuild>
     </ResourceCompile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="libxml2.def" />
-  </ItemGroup>
 </Project>
