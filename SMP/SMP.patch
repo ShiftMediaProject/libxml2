@@ -1,5 +1,5 @@
 diff --git a/catalog.c b/catalog.c
-index effbb2e6..f450c688 100644
+index e071b493..583b1cfa 100644
 --- a/catalog.c
 +++ b/catalog.c
 @@ -77,6 +77,10 @@
@@ -13,7 +13,7 @@ index effbb2e6..f450c688 100644
  #undef XML_XML_DEFAULT_CATALOG
  static char XML_XML_DEFAULT_CATALOG[256] = "file:///etc/xml/catalog";
  #if defined(_WIN32_WCE)
-@@ -3123,12 +3127,17 @@ xmlInitializeCatalog(void) {
+@@ -3125,12 +3129,17 @@ xmlInitializeCatalog(void) {
  
  	catalogs = (const char *) getenv("XML_CATALOG_FILES");
  	if (catalogs == NULL)
@@ -53,7 +53,7 @@ index 8e840f58..1777960b 100644
  #include <libxml/xmlerror.h>
  #include <libxml/xmlmemory.h>
 diff --git a/win32/libxml2.def.src b/win32/libxml2.def.src
-index 1e771e85..47ae6a58 100644
+index c50d6498..e6e99ae8 100644
 --- a/win32/libxml2.def.src
 +++ b/win32/libxml2.def.src
 @@ -11,10 +11,10 @@ __docbDefaultSAXHandler
@@ -151,7 +151,7 @@ index 1e771e85..47ae6a58 100644
  #endif
  xmlFileClose
 diff --git a/xmlIO.c b/xmlIO.c
-index 57312b97..e2a879c7 100644
+index 007144c7..4a8021fd 100644
 --- a/xmlIO.c
 +++ b/xmlIO.c
 @@ -43,12 +43,20 @@
@@ -175,7 +175,7 @@ index 57312b97..e2a879c7 100644
  #ifndef S_ISDIR
  #  ifdef _S_ISDIR
  #    define S_ISDIR(x) _S_ISDIR(x)
-@@ -3777,11 +3785,13 @@ xmlParserGetDirectory(const char *filename) {
+@@ -3791,11 +3799,13 @@ xmlParserGetDirectory(const char *filename) {
          if (cur == dir) dir[1] = 0;
  	else *cur = 0;
  	ret = xmlMemStrdup(dir);
@@ -190,7 +190,7 @@ index 57312b97..e2a879c7 100644
      return(ret);
  #undef IS_XMLPGD_SEP
 diff --git a/xmlmemory.c b/xmlmemory.c
-index c51f49ae..5387917a 100644
+index e0b2531a..3fc91a86 100644
 --- a/xmlmemory.c
 +++ b/xmlmemory.c
 @@ -56,6 +56,13 @@ static xmlMutexPtr xmlMemMutex = NULL;
