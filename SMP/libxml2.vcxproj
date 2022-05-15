@@ -12,7 +12,7 @@
     <ClCompile>
       <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
       <AdditionalDependencies>libzlibd.lib;libiconvd.lib;liblzmad.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -57,7 +57,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
     <ClCompile>
       <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
       <AdditionalDependencies>libzlibd.lib;libiconvd.lib;liblzmad.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -102,7 +102,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
     <ClCompile>
       <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalDependencies>zlibd.lib;iconvd.lib;lzmad.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -147,7 +147,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
     <ClCompile>
       <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalDependencies>zlibd.lib;iconvd.lib;lzmad.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -192,7 +192,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
     <ClCompile>
       <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
       <AdditionalDependencies>libzlib.lib;libiconv.lib;liblzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -237,7 +237,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
     <ClCompile>
       <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
       <AdditionalDependencies>libzlib.lib;libiconv.lib;liblzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -282,7 +282,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
     <ClCompile>
       <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalDependencies>zlib.lib;iconv.lib;lzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -327,7 +327,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
     <ClCompile>
       <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalDependencies>libzlib.lib;libiconv.lib;liblzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -372,7 +372,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
     <ClCompile>
       <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalDependencies>zlib.lib;iconv.lib;lzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -417,7 +417,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
     <ClCompile>
       <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;LIBXML_STATIC_FOR_DLL;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4267;4244;4005;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <AdditionalDependencies>libzlib.lib;libiconv.lib;liblzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
