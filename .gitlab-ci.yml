@@ -42,7 +42,8 @@ gcc:minimum:
 gcc:python3:
   extends: .test
   variables:
-    CFLAGS: "-O2"
+    # TODO: Re-enable the warning after #208 is fixed.
+    CFLAGS: "-O2 -Wno-error=deprecated-declarations"
     PYTHON: "/usr/bin/python3"
 
 gcc:static:
@@ -56,7 +57,7 @@ clang:asan:
   variables:
     CONFIG: "--without-python"
     CC: clang
-    CFLAGS: "-O2 -g -fno-omit-frame-pointer -fsanitize=address,undefined,integer -fno-sanitize-recover=all -Wno-error=cast-align"
+    CFLAGS: "-O2 -g -fno-omit-frame-pointer -fsanitize=address,undefined,unsigned-integer-overflow,implicit-conversion -fno-sanitize-recover=all -Wno-error=cast-align"
     # LeakSanitizer requires SYS_CAP_PTRACE
     ASAN_OPTIONS: "detect_leaks=0"
     UBSAN_OPTIONS: "print_stacktrace=1"
