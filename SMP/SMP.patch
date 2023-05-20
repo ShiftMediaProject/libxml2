@@ -159,7 +159,7 @@ index d83dbf4a..3ed86578 100644
  #endif
  xmlFileClose
 diff --git a/xmlIO.c b/xmlIO.c
-index 16c29f57..68ae59fd 100644
+index 5482cb34..532a492c 100644
 --- a/xmlIO.c
 +++ b/xmlIO.c
 @@ -41,6 +41,13 @@
@@ -176,7 +176,7 @@ index 16c29f57..68ae59fd 100644
  #ifndef S_ISDIR
  #  ifdef _S_ISDIR
  #    define S_ISDIR(x) _S_ISDIR(x)
-@@ -3774,11 +3781,13 @@ xmlParserGetDirectory(const char *filename) {
+@@ -3768,11 +3775,13 @@ xmlParserGetDirectory(const char *filename) {
          if (cur == dir) dir[1] = 0;
  	else *cur = 0;
  	ret = xmlMemStrdup(dir);
