@@ -420,7 +420,7 @@ EXTRA_DIST = Copyright check-xml-test-suite.py gentest.py \
 
 
 pkgconfigdir = $(libdir)/pkgconfig
-nodist_pkgconfig_DATA = libxml-2.0.pc
+pkgconfig_DATA = libxml-2.0.pc
 
 cmakedir = $(libdir)/cmake/libxml2
 cmake_DATA = libxml2-config.cmake

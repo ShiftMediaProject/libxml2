@@ -19,6 +19,9 @@
     <Filter Include="Resource Files">
       <UniqueIdentifier>{cc4faa83-628a-451e-951e-cd0e54d8c029}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\include\private">
+      <UniqueIdentifier>{d34b51b4-96d5-4792-9db1-f90f06128cb4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\xmlcatalog.c">
@@ -156,24 +159,12 @@
     <ClCompile Include="..\xzlib.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\DOCBparser.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\buf.h">
-      <Filter>Header Files\libxml2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\elfgcchack.h">
-      <Filter>Header Files\libxml2</Filter>
-    </ClInclude>
     <ClInclude Include="..\libxml.h">
-      <Filter>Header Files\libxml2</Filter>
-    </ClInclude>
-    <ClInclude Include="..\xzlib.h">
       <Filter>Header Files\libxml2</Filter>
     </ClInclude>
     <ClInclude Include="libxml\xmlversion.h">
@@ -293,9 +284,6 @@
     <ClInclude Include="..\include\libxml\dict.h">
       <Filter>Header Files\include\libxml2</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\libxml\DOCBparser.h">
-      <Filter>Header Files\include\libxml2</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\libxml\encoding.h">
       <Filter>Header Files\include\libxml2</Filter>
     </ClInclude>
@@ -316,6 +304,60 @@
     </ClInclude>
     <ClInclude Include="..\include\libxml\list.h">
       <Filter>Header Files\include\libxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\buf.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\dict.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\enc.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\entities.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\error.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\globals.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\html.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\io.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\memory.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\parser.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\regexp.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\save.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\string.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\threads.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\tree.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\xinclude.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\xpath.h">
+      <Filter>Header Files\include\private</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\private\xzlib.h">
+      <Filter>Header Files\include\private</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

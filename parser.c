@@ -112,8 +112,6 @@ xmlParseElementEnd(xmlParserCtxtPtr ctxt);
  *									*
  ************************************************************************/
 
-#define XML_MAX_HUGE_LENGTH 1000000000
-
 #define XML_PARSER_BIG_ENTITY 1000
 #define XML_PARSER_LOT_ENTITY 5000
 
@@ -3698,11 +3696,6 @@ xmlParseNmtoken(xmlParserCtxtPtr ctxt) {
                 }
 		NEXTL(l);
 		c = CUR_CHAR(l);
-                if (len > maxLength) {
-                    xmlFatalErr(ctxt, XML_ERR_NAME_TOO_LONG, "NmToken");
-                    xmlFree(buffer);
-                    return(NULL);
-                }
 	    }
 	    buffer[len] = 0;
             if (ctxt->instate == XML_PARSER_EOF) {
@@ -9786,12 +9779,6 @@ xmlParseCDSect(xmlParserCtxtPtr ctxt) {
 	sl = l;
 	NEXTL(l);
 	cur = CUR_CHAR(l);
-        if (len > maxLength) {
-            xmlFatalErrMsg(ctxt, XML_ERR_CDATA_NOT_FINISHED,
-                           "CData section too big found\n");
-            xmlFree(buf);
-            return;
-        }
     }
     buf[len] = 0;
     if (ctxt->instate == XML_PARSER_EOF) {

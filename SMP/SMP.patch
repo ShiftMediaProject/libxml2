@@ -1,5 +1,5 @@
 diff --git a/catalog.c b/catalog.c
-index b7837e3d..d0fa3486 100644
+index 24a49f3d..0eaaf7ba 100644
 --- a/catalog.c
 +++ b/catalog.c
 @@ -75,6 +75,10 @@
@@ -13,7 +13,7 @@ index b7837e3d..d0fa3486 100644
  #undef XML_XML_DEFAULT_CATALOG
  static char XML_XML_DEFAULT_CATALOG[256] = "file://" SYSCONFDIR "/xml/catalog";
  #if !defined(_WINDOWS_)
-@@ -3117,12 +3121,17 @@ xmlInitializeCatalog(void) {
+@@ -3113,12 +3117,17 @@ xmlInitializeCatalog(void) {
  
  	catalogs = (const char *) getenv("XML_CATALOG_FILES");
  	if (catalogs == NULL)
@@ -34,23 +34,11 @@ index b7837e3d..d0fa3486 100644
  		if (hmodule != NULL) {
  			char buf[256];
  			unsigned long len = GetModuleFileNameA(hmodule, buf, 255);
-diff --git a/libxml.h b/libxml.h
-index 66f164d5..ff95641c 100644
---- a/libxml.h
-+++ b/libxml.h
-@@ -34,6 +34,7 @@
- #ifndef SYSCONFDIR
-   #define SYSCONFDIR "/etc"
- #endif
-+#include <libxml/xmlstring.h>
- 
- #if defined(__Lynx__)
- #include <stdio.h> /* pull definition of size_t */
 diff --git a/nanohttp.c b/nanohttp.c
-index 2eafd3f4..44be166f 100644
+index e014fe48..4e7b7c7f 100644
 --- a/nanohttp.c
 +++ b/nanohttp.c
-@@ -70,6 +70,13 @@
+@@ -64,6 +64,13 @@
  #include <wsockcompat.h>
  #endif
  
@@ -64,105 +52,11 @@ index 2eafd3f4..44be166f 100644
  #include <libxml/globals.h>
  #include <libxml/xmlerror.h>
  #include <libxml/xmlmemory.h>
-diff --git a/win32/libxml2.def.src b/win32/libxml2.def.src
-index d83dbf4a..3ed86578 100644
---- a/win32/libxml2.def.src
-+++ b/win32/libxml2.def.src
-@@ -5,7 +5,7 @@ EXPORTS
- #ifdef LIBXML_REGEXP_ENABLED
- emptyExp DATA
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- forbiddenExp DATA
- #endif
- #ifdef LIBXML_THREAD_ENABLED
-@@ -758,61 +758,61 @@ xmlEncodeEntities
- xmlEncodeEntitiesReentrant
- xmlEncodeSpecialChars
- xmlErrMemory
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpCtxtNbCons
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpCtxtNbNodes
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpDump
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpExpDerive
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpFree
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpFreeCtxt
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpGetLanguage
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpGetStart
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpIsNillable
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpMaxToken
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpNewAtom
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpNewCtxt
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpNewOr
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpNewRange
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpNewSeq
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpParse
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpRef
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpStringDerive
- #endif
--#ifdef LIBXML_REGEXP_ENABLED
-+#ifdef LIBXML_EXPR_ENABLED
- xmlExpSubsume
- #endif
- xmlFileClose
 diff --git a/xmlIO.c b/xmlIO.c
-index 5482cb34..532a492c 100644
+index 5cab16f4..230e4abb 100644
 --- a/xmlIO.c
 +++ b/xmlIO.c
-@@ -41,6 +41,13 @@
+@@ -38,6 +38,13 @@
  #include <direct.h>
  #endif
  
@@ -176,7 +70,7 @@ index 5482cb34..532a492c 100644
  #ifndef S_ISDIR
  #  ifdef _S_ISDIR
  #    define S_ISDIR(x) _S_ISDIR(x)
-@@ -3768,11 +3775,13 @@ xmlParserGetDirectory(const char *filename) {
+@@ -3717,11 +3724,13 @@ xmlParserGetDirectory(const char *filename) {
          if (cur == dir) dir[1] = 0;
  	else *cur = 0;
  	ret = xmlMemStrdup(dir);
@@ -191,10 +85,10 @@ index 5482cb34..532a492c 100644
      return(ret);
  #undef IS_XMLPGD_SEP
 diff --git a/xmlmemory.c b/xmlmemory.c
-index 892d50c3..b02c9ad5 100644
+index 9ec4770b..2d8bc376 100644
 --- a/xmlmemory.c
 +++ b/xmlmemory.c
-@@ -39,6 +39,13 @@ static xmlMutexPtr xmlMemMutex = NULL;
+@@ -41,6 +41,13 @@ static xmlMutex xmlMemMutex;
  
  void xmlMallocBreakpoint(void);
  
@@ -209,10 +103,10 @@ index 892d50c3..b02c9ad5 100644
   *									*
   *		Macros, variables and associated types			*
 diff --git a/xmlmodule.c b/xmlmodule.c
-index 44eba066..cfc8c900 100644
+index cbb25a6d..5b2ae01b 100644
 --- a/xmlmodule.c
 +++ b/xmlmodule.c
-@@ -314,7 +314,15 @@ xmlModulePlatformSymbol(void *handle, const char *name, void **symbol)
+@@ -316,7 +316,15 @@ xmlModulePlatformSymbol(void *handle, const char *name, void **symbol)
  static void *
  xmlModulePlatformOpen(const char *name)
  {

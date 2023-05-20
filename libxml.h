@@ -37,7 +37,6 @@
 #ifndef SYSCONFDIR
   #define SYSCONFDIR "/etc"
 #endif
-#include <libxml/xmlstring.h>
 
 #ifdef WITH_TRIO
   #define TRIO_REPLACE_STDIO
