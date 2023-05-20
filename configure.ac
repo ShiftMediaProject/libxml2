@@ -3,7 +3,7 @@ AC_PREREQ([2.63])
 
 m4_define([MAJOR_VERSION], 2)
 m4_define([MINOR_VERSION], 11)
-m4_define([MICRO_VERSION], 0)
+m4_define([MICRO_VERSION], 1)
 
 AC_INIT([libxml2],[MAJOR_VERSION.MINOR_VERSION.MICRO_VERSION])
 AC_CONFIG_SRCDIR([entities.c])
@@ -455,7 +455,10 @@ if test "$lt_cv_prog_gnu_ld" = yes; then
     *-*-cygwin* | *-*-mingw* | *-*-msys* )
       ;;
     *)
-      VERSION_SCRIPT_FLAGS=-Wl,--version-script=
+      dnl lld 16 defaults to --no-undefined-version but the version script
+      dnl can contain symbols disabled by configuration options.
+      AX_APPEND_LINK_FLAGS([-Wl,--undefined-version], [VERSION_SCRIPT_FLAGS])
+      AX_APPEND_FLAG([-Wl,--version-script=], [VERSION_SCRIPT_FLAGS])
       ;;
   esac
 else
