@@ -120,7 +120,9 @@ processXml(const char *docFile, FILE *out) {
     fuzzRecorderInit(out);
 
     doc = xmlReadFile(docFile, NULL, opts);
+#ifdef LIBXML_XINCLUDE_ENABLED
     xmlXIncludeProcessFlags(doc, opts);
+#endif
     xmlFreeDoc(doc);
 
     fuzzRecorderCleanup();
@@ -420,7 +422,7 @@ main(int argc, const char **argv) {
         globalData.processFile = processSchema;
 #endif
     } else if (strcmp(fuzzer, "valid") == 0) {
-#ifdef HAVE_XINCLUDE_FUZZER
+#ifdef HAVE_VALID_FUZZER
         processArg = processPattern;
         globalData.processFile = processXml;
 #endif

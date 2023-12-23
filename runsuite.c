@@ -6,9 +6,9 @@
  * daniel@veillard.com
  */
 
-#include "libxml.h"
+#include "config.h"
 #include <stdio.h>
-
+#include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
 
@@ -201,9 +201,6 @@ static xmlXPathContextPtr ctxtXPath;
 
 static void
 initializeLibxml2(void) {
-    xmlGetWarningsDefaultValue = 0;
-    xmlPedanticParserDefault(0);
-
     xmlMemSetup(xmlMemFree, xmlMemMalloc, xmlMemRealloc, xmlMemoryStrdup);
     xmlInitParser();
     xmlSetExternalEntityLoader(testExternalEntityLoader);
@@ -522,7 +519,6 @@ xsdTestCase(xmlNodePtr tst) {
 	    if ((mem != xmlMemUsed()) && (extraMemoryFromResolver == 0)) {
 	        test_log("Validation of instance line %ld leaked %d\n",
 		        xmlGetLineNo(tmp), xmlMemUsed() - mem);
-		xmlMemoryDump();
 	        nb_leaks++;
 	    }
 	}
@@ -577,7 +573,6 @@ xsdTestCase(xmlNodePtr tst) {
 	    if ((mem != xmlMemUsed()) && (extraMemoryFromResolver == 0)) {
 	        test_log("Validation of instance line %ld leaked %d\n",
 		        xmlGetLineNo(tmp), xmlMemUsed() - mem);
-		xmlMemoryDump();
 	        nb_leaks++;
 	    }
 	}
@@ -1157,7 +1152,6 @@ main(int argc ATTRIBUTE_UNUSED, char **argv ATTRIBUTE_UNUSED) {
     }
     xmlXPathFreeContext(ctxtXPath);
     xmlCleanupParser();
-    xmlMemoryDump();
 
     if (logfile != NULL)
         fclose(logfile);
