@@ -9888,7 +9888,7 @@ next_attr:
 	if (defaults != NULL) {
 	    for (i = 0; i < defaults->nbAttrs; i++) {
                 xmlDefAttr *attr = &defaults->attrs[i];
-                const xmlChar *nsuri;
+                const xmlChar *nsuri = NULL;
                 unsigned hashValue, uriHashValue;
                 int res;
 
