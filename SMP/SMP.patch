@@ -1,8 +1,8 @@
 diff --git a/catalog.c b/catalog.c
-index 24a49f3d..0eaaf7ba 100644
+index 945ea2c8..73902f29 100644
 --- a/catalog.c
 +++ b/catalog.c
-@@ -75,6 +75,10 @@
+@@ -74,6 +74,10 @@
  #endif
  
  #if defined(_WIN32) && defined(_MSC_VER)
@@ -13,7 +13,7 @@ index 24a49f3d..0eaaf7ba 100644
  #undef XML_XML_DEFAULT_CATALOG
  static char XML_XML_DEFAULT_CATALOG[256] = "file://" SYSCONFDIR "/xml/catalog";
  #if !defined(_WINDOWS_)
-@@ -3113,12 +3117,17 @@ xmlInitializeCatalog(void) {
+@@ -3112,12 +3116,17 @@ xmlInitializeCatalog(void) {
  
  	catalogs = (const char *) getenv("XML_CATALOG_FILES");
  	if (catalogs == NULL)
@@ -34,26 +34,21 @@ index 24a49f3d..0eaaf7ba 100644
  		if (hmodule != NULL) {
  			char buf[256];
  			unsigned long len = GetModuleFileNameA(hmodule, buf, 255);
-diff --git a/nanohttp.c b/nanohttp.c
-index e014fe48..4e7b7c7f 100644
---- a/nanohttp.c
-+++ b/nanohttp.c
-@@ -64,6 +64,13 @@
- #include <wsockcompat.h>
- #endif
+diff --git a/parser.c b/parser.c
+index dd5dd1fc..e3587dc5 100644
+--- a/parser.c
++++ b/parser.c
+@@ -9888,7 +9888,7 @@ next_attr:
+ 	if (defaults != NULL) {
+ 	    for (i = 0; i < defaults->nbAttrs; i++) {
+                 xmlDefAttr *attr = &defaults->attrs[i];
+-                const xmlChar *nsuri;
++                const xmlChar *nsuri = NULL;
+                 unsigned hashValue, uriHashValue;
+                 int res;
  
-+#if defined(_WIN32) && defined(_MSC_VER)
-+#include <winapifamily.h>
-+#if defined(WINAPI_FAMILY_PARTITION) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
-+#define getenv(x) NULL
-+#endif
-+#endif
-+
- #include <libxml/globals.h>
- #include <libxml/xmlerror.h>
- #include <libxml/xmlmemory.h>
 diff --git a/xmlIO.c b/xmlIO.c
-index 5cab16f4..230e4abb 100644
+index 90379e2d..e11bcf3a 100644
 --- a/xmlIO.c
 +++ b/xmlIO.c
 @@ -38,6 +38,13 @@
@@ -70,7 +65,7 @@ index 5cab16f4..230e4abb 100644
  #ifndef S_ISDIR
  #  ifdef _S_ISDIR
  #    define S_ISDIR(x) _S_ISDIR(x)
-@@ -3717,11 +3724,13 @@ xmlParserGetDirectory(const char *filename) {
+@@ -3687,11 +3694,13 @@ xmlParserGetDirectory(const char *filename) {
          if (cur == dir) dir[1] = 0;
  	else *cur = 0;
  	ret = xmlMemStrdup(dir);
@@ -85,10 +80,10 @@ index 5cab16f4..230e4abb 100644
      return(ret);
  #undef IS_XMLPGD_SEP
 diff --git a/xmlmemory.c b/xmlmemory.c
-index 9ec4770b..2d8bc376 100644
+index 1e999b11..694c8092 100644
 --- a/xmlmemory.c
 +++ b/xmlmemory.c
-@@ -41,6 +41,13 @@ static xmlMutex xmlMemMutex;
+@@ -39,6 +39,13 @@ static xmlMutex xmlMemMutex;
  
  void xmlMallocBreakpoint(void);
  
@@ -103,7 +98,7 @@ index 9ec4770b..2d8bc376 100644
   *									*
   *		Macros, variables and associated types			*
 diff --git a/xmlmodule.c b/xmlmodule.c
-index cbb25a6d..5b2ae01b 100644
+index d8bce329..2118a7e8 100644
 --- a/xmlmodule.c
 +++ b/xmlmodule.c
 @@ -316,7 +316,15 @@ xmlModulePlatformSymbol(void *handle, const char *name, void **symbol)
