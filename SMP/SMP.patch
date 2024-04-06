@@ -35,7 +35,7 @@ index 945ea2c8..73902f29 100644
  			char buf[256];
  			unsigned long len = GetModuleFileNameA(hmodule, buf, 255);
 diff --git a/parser.c b/parser.c
-index aeaadcdd..0897af83 100644
+index b7534ae3..671380bd 100644
 --- a/parser.c
 +++ b/parser.c
 @@ -9887,7 +9887,7 @@ next_attr:
