@@ -3,7 +3,7 @@ AC_PREREQ([2.63])
 
 m4_define([MAJOR_VERSION], 2)
 m4_define([MINOR_VERSION], 12)
-m4_define([MICRO_VERSION], 3)
+m4_define([MICRO_VERSION], 4)
 
 AC_INIT([libxml2],[MAJOR_VERSION.MINOR_VERSION.MICRO_VERSION])
 AC_CONFIG_SRCDIR([entities.c])
@@ -127,6 +127,8 @@ AC_ARG_WITH(xpath,
 [  --with-xpath            XPath 1.0 support (on)])
 AC_ARG_WITH(xptr,
 [  --with-xptr             XPointer support (on)])
+AC_ARG_WITH(xptr-locs,
+[  --with-xptr-locs        XPointer ranges and points (off)])
 AC_ARG_WITH(zlib,
 [  --with-zlib[[=DIR]]       use libz in DIR (on)])
 
