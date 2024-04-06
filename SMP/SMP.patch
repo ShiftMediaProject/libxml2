@@ -35,10 +35,10 @@ index 945ea2c8..73902f29 100644
  			char buf[256];
  			unsigned long len = GetModuleFileNameA(hmodule, buf, 255);
 diff --git a/parser.c b/parser.c
-index dd5dd1fc..e3587dc5 100644
+index aeaadcdd..0897af83 100644
 --- a/parser.c
 +++ b/parser.c
-@@ -9888,7 +9888,7 @@ next_attr:
+@@ -9887,7 +9887,7 @@ next_attr:
  	if (defaults != NULL) {
  	    for (i = 0; i < defaults->nbAttrs; i++) {
                  xmlDefAttr *attr = &defaults->attrs[i];
@@ -48,7 +48,7 @@ index dd5dd1fc..e3587dc5 100644
                  int res;
  
 diff --git a/xmlIO.c b/xmlIO.c
-index 90379e2d..e11bcf3a 100644
+index 95d27157..8844f483 100644
 --- a/xmlIO.c
 +++ b/xmlIO.c
 @@ -38,6 +38,13 @@
@@ -65,7 +65,7 @@ index 90379e2d..e11bcf3a 100644
  #ifndef S_ISDIR
  #  ifdef _S_ISDIR
  #    define S_ISDIR(x) _S_ISDIR(x)
-@@ -3687,11 +3694,13 @@ xmlParserGetDirectory(const char *filename) {
+@@ -3729,11 +3736,13 @@ xmlParserGetDirectory(const char *filename) {
          if (cur == dir) dir[1] = 0;
  	else *cur = 0;
  	ret = xmlMemStrdup(dir);
