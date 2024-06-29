@@ -1,8 +1,8 @@
 diff --git a/parser.c b/parser.c
-index 5f1fdcfa..0001ef9a 100644
+index 372c2ba9..b505c16d 100644
 --- a/parser.c
 +++ b/parser.c
-@@ -7585,7 +7585,7 @@ xmlHandleUndeclaredEntity(xmlParserCtxtPtr ctxt, const xmlChar *name) {
+@@ -7586,7 +7586,7 @@ xmlHandleUndeclaredEntity(xmlParserCtxtPtr ctxt, const xmlChar *name) {
  
  static xmlEntityPtr
  xmlLookupGeneralEntity(xmlParserCtxtPtr ctxt, const xmlChar *name, int inAttr) {
@@ -11,7 +11,7 @@ index 5f1fdcfa..0001ef9a 100644
  
      /*
       * Predefined entities override any extra definition
-@@ -9330,7 +9330,7 @@ next_attr:
+@@ -9331,7 +9331,7 @@ next_attr:
  	if (defaults != NULL) {
  	    for (i = 0; i < defaults->nbAttrs; i++) {
                  xmlDefAttr *attr = &defaults->attrs[i];
@@ -21,10 +21,10 @@ index 5f1fdcfa..0001ef9a 100644
                  int res;
  
 diff --git a/xmlIO.c b/xmlIO.c
-index d4275cbf..33d60e12 100644
+index 640d909c..02506207 100644
 --- a/xmlIO.c
 +++ b/xmlIO.c
-@@ -2899,11 +2899,13 @@ xmlParserGetDirectory(const char *filename) {
+@@ -2903,11 +2903,13 @@ xmlParserGetDirectory(const char *filename) {
          if (cur == dir) dir[1] = 0;
  	else *cur = 0;
  	ret = xmlMemStrdup(dir);
