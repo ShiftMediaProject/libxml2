@@ -18,6 +18,12 @@ extern "C" {
 #if defined(LIBXML_HTML_ENABLED)
   #define HAVE_HTML_FUZZER
 #endif
+#if 1
+  #define HAVE_LINT_FUZZER
+#endif
+#if defined(LIBXML_READER_ENABLED)
+  #define HAVE_READER_FUZZER
+#endif
 #if defined(LIBXML_REGEXP_ENABLED)
   #define HAVE_REGEXP_FUZZER
 #endif
@@ -60,6 +66,12 @@ int
 xmlFuzzMallocFailed(void);
 
 void
+xmlFuzzResetMallocFailed(void);
+
+void
+xmlFuzzCheckMallocFailure(const char *func, int expect);
+
+void
 xmlFuzzDataInit(const char *data, size_t size);
 
 void
@@ -70,6 +82,9 @@ xmlFuzzWriteInt(FILE *out, size_t v, int size);
 
 size_t
 xmlFuzzReadInt(int size);
+
+size_t
+xmlFuzzBytesRemaining(void);
 
 const char *
 xmlFuzzReadRemaining(size_t *size);
