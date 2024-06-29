@@ -7585,7 +7585,7 @@ xmlHandleUndeclaredEntity(xmlParserCtxtPtr ctxt, const xmlChar *name) {
 
 static xmlEntityPtr
 xmlLookupGeneralEntity(xmlParserCtxtPtr ctxt, const xmlChar *name, int inAttr) {
-    xmlEntityPtr ent;
+    xmlEntityPtr ent = NULL;
 
     /*
      * Predefined entities override any extra definition
