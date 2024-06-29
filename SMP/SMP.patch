@@ -35,10 +35,10 @@ index 945ea2c8..73902f29 100644
  			char buf[256];
  			unsigned long len = GetModuleFileNameA(hmodule, buf, 255);
 diff --git a/parser.c b/parser.c
-index 1d99a48f..5a783ce6 100644
+index fe0ff4e2..ac621a6b 100644
 --- a/parser.c
 +++ b/parser.c
-@@ -9887,7 +9887,7 @@ next_attr:
+@@ -9890,7 +9890,7 @@ next_attr:
  	if (defaults != NULL) {
  	    for (i = 0; i < defaults->nbAttrs; i++) {
                  xmlDefAttr *attr = &defaults->attrs[i];
