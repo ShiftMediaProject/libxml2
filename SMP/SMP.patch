@@ -1,44 +1,17 @@
-diff --git a/catalog.c b/catalog.c
-index 945ea2c8..73902f29 100644
---- a/catalog.c
-+++ b/catalog.c
-@@ -74,6 +74,10 @@
- #endif
- 
- #if defined(_WIN32) && defined(_MSC_VER)
-+#include <winapifamily.h>
-+#if defined(WINAPI_FAMILY_PARTITION) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
-+#define getenv(x) NULL
-+#endif
- #undef XML_XML_DEFAULT_CATALOG
- static char XML_XML_DEFAULT_CATALOG[256] = "file://" SYSCONFDIR "/xml/catalog";
- #if !defined(_WINDOWS_)
-@@ -3112,12 +3116,17 @@ xmlInitializeCatalog(void) {
- 
- 	catalogs = (const char *) getenv("XML_CATALOG_FILES");
- 	if (catalogs == NULL)
--#if defined(_WIN32) && defined(_MSC_VER)
-+#if defined(_WIN32) && defined(_MSC_VER) && (!defined(WINAPI_FAMILY_PARTITION) || !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) || WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP))
-     {
- 		void* hmodule;
--		hmodule = GetModuleHandleA("libxml2.dll");
-+#   ifdef _DEBUG
-+#       define LIBXML2_MODULE L"xml2d.dll"
-+#   else
-+#       define LIBXML2_MODULE L"xml2.dll"
-+#   endif
-+        hmodule = GetModuleHandleW(LIBXML2_MODULE);
- 		if (hmodule == NULL)
--			hmodule = GetModuleHandleA(NULL);
-+			hmodule = GetModuleHandleW(NULL);
- 		if (hmodule != NULL) {
- 			char buf[256];
- 			unsigned long len = GetModuleFileNameA(hmodule, buf, 255);
 diff --git a/parser.c b/parser.c
-index fe0ff4e2..ac621a6b 100644
+index 5f1fdcfa..0001ef9a 100644
 --- a/parser.c
 +++ b/parser.c
-@@ -9890,7 +9890,7 @@ next_attr:
+@@ -7585,7 +7585,7 @@ xmlHandleUndeclaredEntity(xmlParserCtxtPtr ctxt, const xmlChar *name) {
+ 
+ static xmlEntityPtr
+ xmlLookupGeneralEntity(xmlParserCtxtPtr ctxt, const xmlChar *name, int inAttr) {
+-    xmlEntityPtr ent;
++    xmlEntityPtr ent = NULL;
+ 
+     /*
+      * Predefined entities override any extra definition
+@@ -9330,7 +9330,7 @@ next_attr:
  	if (defaults != NULL) {
  	    for (i = 0; i < defaults->nbAttrs; i++) {
                  xmlDefAttr *attr = &defaults->attrs[i];
@@ -48,24 +21,10 @@ index fe0ff4e2..ac621a6b 100644
                  int res;
  
 diff --git a/xmlIO.c b/xmlIO.c
-index 95d27157..8844f483 100644
+index d4275cbf..33d60e12 100644
 --- a/xmlIO.c
 +++ b/xmlIO.c
-@@ -38,6 +38,13 @@
- #include <direct.h>
- #endif
- 
-+#if defined(_WIN32) && defined(_MSC_VER)
-+#include <winapifamily.h>
-+#if defined(WINAPI_FAMILY_PARTITION) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
-+#define getenv(x) NULL
-+#endif
-+#endif
-+
- #ifndef S_ISDIR
- #  ifdef _S_ISDIR
- #    define S_ISDIR(x) _S_ISDIR(x)
-@@ -3729,11 +3736,13 @@ xmlParserGetDirectory(const char *filename) {
+@@ -2899,11 +2899,13 @@ xmlParserGetDirectory(const char *filename) {
          if (cur == dir) dir[1] = 0;
  	else *cur = 0;
  	ret = xmlMemStrdup(dir);
@@ -79,29 +38,11 @@ index 95d27157..8844f483 100644
      }
      return(ret);
  #undef IS_XMLPGD_SEP
-diff --git a/xmlmemory.c b/xmlmemory.c
-index 1e999b11..694c8092 100644
---- a/xmlmemory.c
-+++ b/xmlmemory.c
-@@ -39,6 +39,13 @@ static xmlMutex xmlMemMutex;
- 
- void xmlMallocBreakpoint(void);
- 
-+#if defined(_WIN32) && defined(_MSC_VER)
-+#include <winapifamily.h>
-+#if defined(WINAPI_FAMILY_PARTITION) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) && !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
-+#define getenv(x) NULL
-+#endif
-+#endif
-+
- /************************************************************************
-  *									*
-  *		Macros, variables and associated types			*
 diff --git a/xmlmodule.c b/xmlmodule.c
-index d8bce329..2118a7e8 100644
+index dd2fd7a5..a80bac1f 100644
 --- a/xmlmodule.c
 +++ b/xmlmodule.c
-@@ -316,7 +316,15 @@ xmlModulePlatformSymbol(void *handle, const char *name, void **symbol)
+@@ -267,7 +267,15 @@ xmlModulePlatformSymbol(void *handle, const char *name, void **symbol)
  static void *
  xmlModulePlatformOpen(const char *name)
  {
@@ -117,3 +58,16 @@ index d8bce329..2118a7e8 100644
  }
  
  /*
+diff --git a/xpath.c b/xpath.c
+index 0ddde8d4..807a748d 100644
+--- a/xpath.c
++++ b/xpath.c
+@@ -8481,7 +8481,7 @@ void
+ xmlXPathLangFunction(xmlXPathParserContextPtr ctxt, int nargs) {
+     xmlXPathObjectPtr val;
+     xmlNodePtr cur;
+-    xmlChar *theLang;
++    xmlChar *theLang = NULL;
+     const xmlChar *lang;
+     int ret = 0;
+     int i;

@@ -15,7 +15,7 @@
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
-      <AdditionalDependencies>libzlibd.lib;libiconvd.lib;liblzmad.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;bcrypt.lib;libzlibd.lib;libiconvd.lib;liblzmad.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
@@ -60,7 +60,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
-      <AdditionalDependencies>libzlibd.lib;libiconvd.lib;liblzmad.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;bcrypt.lib;libzlibd.lib;libiconvd.lib;liblzmad.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
@@ -105,7 +105,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>zlibd.lib;iconvd.lib;lzmad.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;bcrypt.lib;zlibd.lib;iconvd.lib;lzmad.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
@@ -150,7 +150,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>zlibd.lib;iconvd.lib;lzmad.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;bcrypt.lib;zlibd.lib;iconvd.lib;lzmad.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
@@ -195,7 +195,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
-      <AdditionalDependencies>libzlib.lib;libiconv.lib;liblzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;bcrypt.lib;libzlib.lib;libiconv.lib;liblzma.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
@@ -240,7 +240,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
-      <AdditionalDependencies>libzlib.lib;libiconv.lib;liblzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;bcrypt.lib;libzlib.lib;libiconv.lib;liblzma.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
@@ -285,7 +285,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>zlib.lib;iconv.lib;lzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;bcrypt.lib;zlib.lib;iconv.lib;lzma.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
@@ -330,7 +330,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>libzlib.lib;libiconv.lib;liblzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;bcrypt.lib;libzlib.lib;libiconv.lib;liblzma.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
@@ -375,7 +375,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>zlib.lib;iconv.lib;lzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;bcrypt.lib;zlib.lib;iconv.lib;lzma.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
@@ -420,7 +420,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>libzlib.lib;libiconv.lib;liblzma.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;bcrypt.lib;libzlib.lib;libiconv.lib;liblzma.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4221 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
