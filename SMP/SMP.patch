@@ -1,8 +1,8 @@
 diff --git a/parser.c b/parser.c
-index 1a0ff156..ee20a380 100644
+index 10695ecf..70b2bf74 100644
 --- a/parser.c
 +++ b/parser.c
-@@ -7604,7 +7604,7 @@ xmlHandleUndeclaredEntity(xmlParserCtxtPtr ctxt, const xmlChar *name) {
+@@ -7612,7 +7612,7 @@ xmlHandleUndeclaredEntity(xmlParserCtxtPtr ctxt, const xmlChar *name) {
  
  static xmlEntityPtr
  xmlLookupGeneralEntity(xmlParserCtxtPtr ctxt, const xmlChar *name, int inAttr) {
@@ -11,7 +11,7 @@ index 1a0ff156..ee20a380 100644
  
      /*
       * Predefined entities override any extra definition
-@@ -9349,7 +9349,7 @@ next_attr:
+@@ -9357,7 +9357,7 @@ next_attr:
  	if (defaults != NULL) {
  	    for (i = 0; i < defaults->nbAttrs; i++) {
                  xmlDefAttr *attr = &defaults->attrs[i];
@@ -20,24 +20,6 @@ index 1a0ff156..ee20a380 100644
                  unsigned hashValue, uriHashValue;
                  int res;
  
-diff --git a/xmlIO.c b/xmlIO.c
-index 640d909c..02506207 100644
---- a/xmlIO.c
-+++ b/xmlIO.c
-@@ -2903,11 +2903,13 @@ xmlParserGetDirectory(const char *filename) {
-         if (cur == dir) dir[1] = 0;
- 	else *cur = 0;
- 	ret = xmlMemStrdup(dir);
-+#if !defined(WINAPI_FAMILY_PARTITION) || !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) || WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
-     } else {
-         if (getcwd(dir, 1024) != NULL) {
- 	    dir[1023] = 0;
- 	    ret = xmlMemStrdup(dir);
- 	}
-+#endif
-     }
-     return(ret);
- #undef IS_XMLPGD_SEP
 diff --git a/xmlmodule.c b/xmlmodule.c
 index dd2fd7a5..a80bac1f 100644
 --- a/xmlmodule.c
