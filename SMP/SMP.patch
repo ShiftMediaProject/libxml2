@@ -1,5 +1,5 @@
 diff --git a/parser.c b/parser.c
-index 365025c5..aa6367a3 100644
+index 52ca3565..bd858419 100644
 --- a/parser.c
 +++ b/parser.c
 @@ -7612,7 +7612,7 @@ xmlHandleUndeclaredEntity(xmlParserCtxtPtr ctxt, const xmlChar *name) {
@@ -11,7 +11,7 @@ index 365025c5..aa6367a3 100644
  
      /*
       * Predefined entities override any extra definition
-@@ -9357,7 +9357,7 @@ next_attr:
+@@ -9390,7 +9390,7 @@ next_attr:
  	if (defaults != NULL) {
  	    for (i = 0; i < defaults->nbAttrs; i++) {
                  xmlDefAttr *attr = &defaults->attrs[i];
@@ -41,7 +41,7 @@ index dd2fd7a5..a80bac1f 100644
  
  /*
 diff --git a/xpath.c b/xpath.c
-index 033de621..f26bd46b 100644
+index 485d7747..c3501fb3 100644
 --- a/xpath.c
 +++ b/xpath.c
 @@ -8481,7 +8481,7 @@ void
