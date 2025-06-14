@@ -1,5 +1,5 @@
 diff --git a/parser.c b/parser.c
-index 52ca3565..bd858419 100644
+index 44467355..092e8390 100644
 --- a/parser.c
 +++ b/parser.c
 @@ -7612,7 +7612,7 @@ xmlHandleUndeclaredEntity(xmlParserCtxtPtr ctxt, const xmlChar *name) {
