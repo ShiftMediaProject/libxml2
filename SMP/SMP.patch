@@ -1,8 +1,8 @@
 diff --git a/parser.c b/parser.c
-index 44467355..092e8390 100644
+index 10a1120a..67cce264 100644
 --- a/parser.c
 +++ b/parser.c
-@@ -7612,7 +7612,7 @@ xmlHandleUndeclaredEntity(xmlParserCtxtPtr ctxt, const xmlChar *name) {
+@@ -7616,7 +7616,7 @@ xmlHandleUndeclaredEntity(xmlParserCtxtPtr ctxt, const xmlChar *name) {
  
  static xmlEntityPtr
  xmlLookupGeneralEntity(xmlParserCtxtPtr ctxt, const xmlChar *name, int inAttr) {
@@ -11,7 +11,7 @@ index 44467355..092e8390 100644
  
      /*
       * Predefined entities override any extra definition
-@@ -9390,7 +9390,7 @@ next_attr:
+@@ -9394,7 +9394,7 @@ next_attr:
  	if (defaults != NULL) {
  	    for (i = 0; i < defaults->nbAttrs; i++) {
                  xmlDefAttr *attr = &defaults->attrs[i];
