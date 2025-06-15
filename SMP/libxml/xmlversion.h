@@ -15,28 +15,28 @@
  *
  * the version string like "1.2.3"
  */
-#define LIBXML_DOTTED_VERSION "2.14.1"
+#define LIBXML_DOTTED_VERSION "2.14.2"
 
 /**
  * LIBXML_VERSION:
  *
  * the version number: 1.2.3 value is 10203
  */
-#define LIBXML_VERSION 20141
+#define LIBXML_VERSION 20142
 
 /**
  * LIBXML_VERSION_STRING:
  *
  * the version number string, 1.2.3 value is "10203"
  */
-#define LIBXML_VERSION_STRING "20141"
+#define LIBXML_VERSION_STRING "20142"
 
 /**
  * LIBXML_VERSION_EXTRA:
  *
  * extra version information, used to show a git commit description
  */
-#define LIBXML_VERSION_EXTRA "-GITv2.14.1"
+#define LIBXML_VERSION_EXTRA "-GITv2.14.2"
 
 /**
  * LIBXML_TEST_VERSION:
@@ -44,7 +44,7 @@
  * Macro to check that the libxml version in use is compatible with
  * the version the software has been compiled against
  */
-#define LIBXML_TEST_VERSION xmlCheckVersion(20141);
+#define LIBXML_TEST_VERSION xmlCheckVersion(20142);
 
 /**
  * LIBXML_THREAD_ENABLED:
