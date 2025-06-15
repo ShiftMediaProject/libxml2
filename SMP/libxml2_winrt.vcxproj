@@ -10,7 +10,7 @@
   </ImportGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugWinRT|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;XML_THREAD_LOCAL=__declspec(thread);LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
@@ -55,7 +55,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugWinRT|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;XML_THREAD_LOCAL=__declspec(thread);LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
@@ -100,7 +100,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLLWinRT|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;XML_THREAD_LOCAL=__declspec(thread);HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
@@ -145,7 +145,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLLWinRT|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;XML_THREAD_LOCAL=__declspec(thread);HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;DEBUG;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
@@ -190,7 +190,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWinRT|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;XML_THREAD_LOCAL=__declspec(thread);LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
@@ -235,7 +235,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWinRT|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;XML_THREAD_LOCAL=__declspec(thread);LIBXML_STATIC;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
@@ -280,7 +280,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLWinRT|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;XML_THREAD_LOCAL=__declspec(thread);HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
@@ -325,7 +325,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLWinRTStaticDeps|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;XML_THREAD_LOCAL=__declspec(thread);HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
@@ -370,7 +370,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLWinRT|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;XML_THREAD_LOCAL=__declspec(thread);HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
@@ -415,7 +415,7 @@ del /f /q $(OutDir)\licenses\libxml2.txt
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLWinRTStaticDeps|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>IN_LIBXML;HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IN_LIBXML;XML_THREAD_LOCAL=__declspec(thread);HAVE_LIBLZMA;HAVE_LZMA_H;HAVE_LIBZ;HAVE_ZLIB_H;HAVE_CONFIG_H;LZMA_API_STATIC;_WINSOCK_DEPRECATED_NO_WARNINGS;LIBXML_STATIC_FOR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;..\include;$(OutDir)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4244;4005;4996;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>

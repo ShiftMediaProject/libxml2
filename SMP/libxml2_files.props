@@ -16,9 +16,7 @@
     <ClCompile Include="..\hash.c" />
     <ClCompile Include="..\HTMLparser.c" />
     <ClCompile Include="..\HTMLtree.c" />
-    <ClCompile Include="..\legacy.c" />
     <ClCompile Include="..\list.c" />
-    <ClCompile Include="..\nanoftp.c" />
     <ClCompile Include="..\nanohttp.c">
       <ForcedIncludeFiles>io.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
@@ -26,7 +24,6 @@
     <ClCompile Include="..\parserInternals.c" />
     <ClCompile Include="..\pattern.c" />
     <ClCompile Include="..\relaxng.c" />
-    <ClCompile Include="..\SAX.c" />
     <ClCompile Include="..\SAX2.c" />
     <ClCompile Include="..\schematron.c" />
     <ClCompile Include="..\threads.c" />
@@ -100,6 +97,7 @@
     <ClInclude Include="..\include\libxml\xpathInternals.h" />
     <ClInclude Include="..\include\libxml\xpointer.h" />
     <ClInclude Include="..\include\private\buf.h" />
+    <ClInclude Include="..\include\private\cata.h" />
     <ClInclude Include="..\include\private\dict.h" />
     <ClInclude Include="..\include\private\enc.h" />
     <ClInclude Include="..\include\private\entities.h" />
@@ -107,6 +105,7 @@
     <ClInclude Include="..\include\private\globals.h" />
     <ClInclude Include="..\include\private\html.h" />
     <ClInclude Include="..\include\private\io.h" />
+    <ClInclude Include="..\include\private\lint.h" />
     <ClInclude Include="..\include\private\memory.h" />
     <ClInclude Include="..\include\private\parser.h" />
     <ClInclude Include="..\include\private\regexp.h" />
@@ -117,6 +116,7 @@
     <ClInclude Include="..\include\private\xinclude.h" />
     <ClInclude Include="..\include\private\xpath.h" />
     <ClInclude Include="..\include\private\xzlib.h" />
+    <ClInclude Include="..\include\private\unicode.h" />
     <ClInclude Include="..\libxml.h" />
     <ClInclude Include="config.h" />
     <ClInclude Include="libxml\xmlversion.h" />
