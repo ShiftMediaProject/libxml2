@@ -77,7 +77,9 @@ static xmlMutex xmlThrDefMutex;
 
 #ifdef HAVE_WIN32_THREADS
   #if defined(LIBXML_STATIC) && !defined(LIBXML_STATIC_FOR_DLL)
-    #define USE_WAIT_DTOR
+    #if !defined(WINAPI_FAMILY_PARTITION) || (!WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) && WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP))
+      #define USE_WAIT_DTOR
+    #endif
   #else
     #define USE_DLL_MAIN
   #endif
